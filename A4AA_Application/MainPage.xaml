@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:A4AA_Application"
+             x:Class="A4AA_Application.MainPage">
+
+    <StackLayout  HorizontalOptions ="CenterAndExpand" >
+        <Label Text="Welcome to Login page!" FontSize="Large"/>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Entry x:Name="UsernameEnt" Placeholder="Username" />
+            <Entry x:Name="PasswordEnt" Placeholder="Password" IsPassword="True"/>
+            <Button Text="Login" Clicked="OnClicked3"/>
+            <Button Text="Question Page" Clicked="OnClicked2"/>
+            <Button Text="Create Account" Clicked="OnClicked1" />
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

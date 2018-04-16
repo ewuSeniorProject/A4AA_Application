@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "A4AA_Application", "A4AA_Application\A4AA_Application.shproj", "{6A3104B5-BB3B-4394-A82C-983CE279E7A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A4AA_Application.Android", "A4AA_Application.Android\A4AA_Application.Android.csproj", "{FCE78A11-7DBE-430A-A918-908918304833}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		A4AA_Application\A4AA_Application.projitems*{6a3104b5-bb3b-4394-a82c-983ce279e7a8}*SharedItemsImports = 13
+		A4AA_Application\A4AA_Application.projitems*{fce78a11-7dbe-430a-a918-908918304833}*SharedItemsImports = 4
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCE78A11-7DBE-430A-A918-908918304833}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCE78A11-7DBE-430A-A918-908918304833}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCE78A11-7DBE-430A-A918-908918304833}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{FCE78A11-7DBE-430A-A918-908918304833}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCE78A11-7DBE-430A-A918-908918304833}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCE78A11-7DBE-430A-A918-908918304833}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {84AA7C08-F767-4287-B4E2-65391417DB80}
+	EndGlobalSection
+EndGlobal

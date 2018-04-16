@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="A4AA_Application.SurveyPages.MainSurveyPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label TextColor="BlueViolet" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Center" Text="Please enter data below."/>
+            <Entry Completed="Entry_Completed" HorizontalOptions="Center" VerticalOptions="Center" Placeholder="Enter data here..."/>
+            <Label x:Name="resLabel" TextColor="BlueViolet" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Center" Text=""/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
