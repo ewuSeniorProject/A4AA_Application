@@ -113,9 +113,19 @@
     <Compile Include="$(MSBuildThisFileDirectory)SurveyPages\MainSurveyPage.xaml.cs">
       <DependentUpon>MainSurveyPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionA.xaml.cs">
+      <DependentUpon>SurveySectionA.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Utils\Settings.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)surveyQuestions.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionA.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
