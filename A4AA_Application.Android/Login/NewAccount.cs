@@ -1,14 +1,17 @@
-﻿namespace A4AA_Application.Login
+﻿using System;
+
+namespace A4AA_Application.Login
 {
+	[Serializable]
 	public class NewAccount
 	{
-		private string fname { get; set; }
-		private string lname { get; set; }
-		private string user_name { get; set; }
-		private string email { get; set; }
-		private string password;
-		private string role = "level 1";
-		private string active = "true";
+		public string fname { get; set; }
+		public string lname { get; set; }
+		public string user_name { get; set; }
+		public string email { get; set; }
+		public string password { get; set; }
+		public string role = "user";
+		public string active = "yes";
 
 		public NewAccount(string fname, string lname, string username, string email, string password)
 		{
