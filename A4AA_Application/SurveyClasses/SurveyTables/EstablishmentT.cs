@@ -1,12 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using A4AA_Application.SurveyClasses.SurveyQuestions;
 
 namespace A4AA_Application.SurveyClasses.SurveyTables
 {
     class EstablishmentT
     {
-        private string name;
+        private Question est_Nam = new Est_Nam();
+        private Question est_Web = new Est_Web();
+        private Question est_Sub = new Est_Sub();
+        private Question est_Dat = new Est_Dat();
+        private Question est_Str = new Est_Str();
+        private Question est_Cit = new Est_Cit();
+        private Question est_Sta = new Est_Sta();
+        private Question est_Zip = new Est_Zip();
+        private Question est_Pho = new Est_Pho();
+        private Question est_Tty = new Est_Tty();
+        private Question est_Con_Fna = new Est_Con_Fna();
+        private Question est_Con_Lna = new Est_Con_Lna();
+        private Question est_Con_Tit = new Est_Con_Tit();
+        private Question est_Con_Ema = new Est_Con_Ema();
+        private Question est_Con_Com = new Est_Con_Com();
+
+        /*private string name;
         private string webSite;
         private string subtype;
         private DateTime date;
@@ -204,6 +221,6 @@ namespace A4AA_Application.SurveyClasses.SurveyTables
             {
                 config_comment = value;
             }
-        }
+        }*/
     }
 }
