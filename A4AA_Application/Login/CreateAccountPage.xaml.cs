@@ -42,8 +42,8 @@ namespace A4AA_Application.Login
 		{
 			String fname = Entries[0].Text;
 			String lname = Entries[1].Text;
-			String username = Entries[4].Text;
-			String email = Entries[0].Text;
+			String username = Entries[2].Text;
+			String email = Entries[4].Text;
 			String password = Entries[3].Text;
 
 			return new NewAccount(fname, lname, username, email, password);
