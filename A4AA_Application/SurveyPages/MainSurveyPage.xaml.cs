@@ -43,6 +43,7 @@ namespace A4AA_Application.SurveyPages
 
 		}
 
+        /*
         private string[] loadQuestions()
         {
             var assembly = typeof(App).GetTypeInfo().Assembly;
@@ -86,7 +87,7 @@ namespace A4AA_Application.SurveyPages
 				var response = httpClient.PostAsync(uri, new StringContent(sjc.toJsonString(), Encoding.UTF8, "application/json")).Result;
 				resLabel.Text = await response.Content.ReadAsStringAsync();
 			}
-		}
+		}*/
 	}
 	
 }
