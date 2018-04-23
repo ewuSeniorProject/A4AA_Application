@@ -37,6 +37,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Login\CreateAccountPage.xaml.cs">
       <DependentUpon>CreateAccountPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Login\GetSetUser.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Login\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
