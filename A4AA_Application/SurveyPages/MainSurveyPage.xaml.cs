@@ -43,6 +43,47 @@ namespace A4AA_Application.SurveyPages
 
 		}
 
+        async void OnClickedA(object sender, EventArgs args)
+        {
+            await Navigation.PushAsync(new SurveyPages.SurveySectionA());
+        }
+        async void OnClickedB(object sender, EventArgs args)
+        {
+            //await Navigation.PushAsync(new SurveyPages.MainSurveyPage());
+        }
+        async void OnClickedC(object sender, EventArgs args)
+        {
+            //await Navigation.PushAsync(new SurveyPages.MainSurveyPage());
+        }
+        async void OnClickedD(object sender, EventArgs args)
+        {
+            //await Navigation.PushAsync(new SurveyPages.MainSurveyPage());
+        }
+        async void OnClickedE(object sender, EventArgs args)
+        {
+            //await Navigation.PushAsync(new SurveyPages.MainSurveyPage());
+        }
+        async void OnClickedF(object sender, EventArgs args)
+        {
+            //await Navigation.PushAsync(new SurveyPages.MainSurveyPage());
+        }
+        async void OnClickedG(object sender, EventArgs args)
+        {
+            //await Navigation.PushAsync(new SurveyPages.MainSurveyPage());
+        }
+        async void OnClickedH(object sender, EventArgs args)
+        {
+            //await Navigation.PushAsync(new SurveyPages.MainSurveyPage());
+        }
+        async void OnClickedI(object sender, EventArgs args)
+        {
+            //await Navigation.PushAsync(new SurveyPages.MainSurveyPage());
+        }
+        async void OnClickedJ(object sender, EventArgs args)
+        {
+            //await Navigation.PushAsync(new SurveyPages.MainSurveyPage());
+        }
+        /*
         private string[] loadQuestions()
         {
             var assembly = typeof(App).GetTypeInfo().Assembly;
@@ -86,7 +127,7 @@ namespace A4AA_Application.SurveyPages
 				var response = httpClient.PostAsync(uri, new StringContent(sjc.toJsonString(), Encoding.UTF8, "application/json")).Result;
 				resLabel.Text = await response.Content.ReadAsStringAsync();
 			}
-		}
-	}
+		}*/
+    }
 	
 }
