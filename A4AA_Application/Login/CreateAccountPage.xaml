@@ -6,13 +6,13 @@
         <StackLayout  HorizontalOptions ="CenterAndExpand" >
             <Label Text="Create Login!" FontSize="Large"/>
             <StackLayout VerticalOptions="CenterAndExpand">
-                <Entry Placeholder="First Name"/>
-                <Entry Placeholder="Last name"/>
-                <Entry Placeholder="Username"/>
-                <Entry Placeholder="Password" IsPassword="True"/>
-                <Entry Placeholder="Re-Enter Password" IsPassword="True"/>
-                <Entry Placeholder="Email"/>
-                <Entry Placeholder="Confirm Email"/>
+                <Entry x:Name ="fname" Placeholder="First Name"/>
+                <Entry x:Name ="lname" Placeholder="Last name"/>
+                <Entry x:Name ="username" Placeholder="Username"/>
+                <Entry x:Name ="password" Placeholder="Password" IsPassword="True"/>
+                <Entry x:Name ="password2" Placeholder="Re-Enter Password" IsPassword="True"/>
+                <Entry x:Name ="email" Placeholder="Email"/>
+                <Entry x:Name ="email2" Placeholder="Confirm Email"/>
                 <Button Text="Create Account" Clicked="OnClicked" />
             </StackLayout>
         </StackLayout>
