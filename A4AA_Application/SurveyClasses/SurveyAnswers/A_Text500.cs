@@ -4,7 +4,7 @@ using System.Text;
 
 namespace A4AA_Application.SurveyClasses.SurveyAnswers
 {
-    class A_Text500 : Answer
+    public class A_Text500 : Answer
     {
         private string data;
 

@@ -5,8 +5,16 @@ using A4AA_Application.SurveyClasses.SurveyTables;
 
 namespace A4AA_Application.SurveyClasses.SurveySections
 {
-    class SectionA
+    public class SectionA
     {
+        public SectionA()
+        {
+            establishmentT = new EstablishmentT();
+            configurationT = new ConfigurationT();
+            categoryT = new CategoryT();
+            userT = new UserT();
+        }
+
         private EstablishmentT establishmentT;
         private ConfigurationT configurationT;
         private CategoryT categoryT;

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace A4AA_Application.SurveyClasses.SurveyTables
 {
-    class Route_From_ParkingT
+    public class Route_From_ParkingT
     {
         private const double LARGEST_VALUE_ACCEPTED = 99999.99;
         private const int NUM_DIGITS_AFTER_DECIMAL = 2;
