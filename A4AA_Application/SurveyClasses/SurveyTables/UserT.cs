@@ -1,11 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using A4AA_Application.SurveyClasses.SurveyQuestions;
 
 namespace A4AA_Application.SurveyClasses.SurveyTables
 {
-    class UserT
+    public class UserT
     {
+        private Question use_Fna = new Use_Fna();
+        private Question use_Lna = new Use_Lna();
+        private Question use_Pas = new Use_Pas();
+        private Question use_Act = new Use_Act();
+        private Question use_Use_Rol = new Use_Use_Rol();
+        /*
         private string fname;
         private string lname;
         private string password;
@@ -66,6 +73,6 @@ namespace A4AA_Application.SurveyClasses.SurveyTables
 
                 user_roll = value;
             }
-        }
+        }*/
     }
 }

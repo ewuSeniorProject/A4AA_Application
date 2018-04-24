@@ -4,7 +4,7 @@ using System.Text;
 
 namespace A4AA_Application.SurveyClasses.SurveyTables
 {
-    class EmergencyT
+    public class EmergencyT
     {
         private string evac_info;
         private string alt_evac_info;

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace A4AA_Application.SurveyClasses.SurveyTables
 {
-    class ElevatorT
+    public class ElevatorT
     {
         private string is_elevator;
         private string location;

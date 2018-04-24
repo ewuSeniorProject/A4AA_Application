@@ -61,6 +61,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyAnswers\A_Decimal5_2.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyAnswers\A_Text8.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyAnswers\A_Text255.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\Use_Act.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\Use_Use_Rol.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\Use_Pas.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\Use_Lna.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\Use_Fna.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\Est_Con_Ema.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\Est_Con_Com.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\Est_Con_Tit.cs" />

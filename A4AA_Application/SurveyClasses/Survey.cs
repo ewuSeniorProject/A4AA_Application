@@ -5,8 +5,22 @@ using A4AA_Application.SurveyClasses.SurveySections;
 
 namespace A4AA_Application.SurveyClasses
 {
-    class Survey
+    public class Survey
     {
+        public Survey()
+        {
+            sectionA = new SectionA();
+            sectionB = new SectionB();
+            sectionC = new SectionC();
+            sectionD = new SectionD();
+            sectionE = new SectionE();
+            sectionF = new SectionF();
+            sectionG = new SectionG();
+            sectionH = new SectionH();
+            sectionI = new SectionI();
+            sectionJ = new SectionJ();
+        }
+
         private SectionA sectionA;
         private SectionB sectionB;
         private SectionC sectionC;

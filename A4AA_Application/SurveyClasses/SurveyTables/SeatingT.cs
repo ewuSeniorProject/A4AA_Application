@@ -4,7 +4,7 @@ using System.Text;
 
 namespace A4AA_Application.SurveyClasses.SurveyTables
 {
-    class SeatingT
+    public class SeatingT
     {
         private string seating_no_step;
         private string table_aisles;

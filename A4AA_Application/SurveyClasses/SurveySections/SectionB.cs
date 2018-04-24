@@ -5,8 +5,17 @@ using A4AA_Application.SurveyClasses.SurveyTables;
 
 namespace A4AA_Application.SurveyClasses.SurveySections
 {
-    class SectionB
+    public class SectionB
     {
+        public SectionB()
+        {
+            parkingT = new ParkingT();
+            route_From_ParkingT = new Route_From_ParkingT();
+            sTA_BusT = new STA_BusT();
+            passenger_LoadingT = new Passenger_LoadingT();
+            sTA_RouteT = new STA_RouteT();
+        }
+
         private ParkingT parkingT;
         private Route_From_ParkingT route_From_ParkingT;
         private STA_BusT sTA_BusT;

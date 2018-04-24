@@ -5,7 +5,7 @@ using A4AA_Application.SurveyClasses.SurveyQuestions;
 
 namespace A4AA_Application.SurveyClasses.SurveyTables
 {
-    class EstablishmentT
+    public class EstablishmentT
     {
         private Question est_Nam = new Est_Nam();
         private Question est_Web = new Est_Web();
@@ -22,6 +22,22 @@ namespace A4AA_Application.SurveyClasses.SurveyTables
         private Question est_Con_Tit = new Est_Con_Tit();
         private Question est_Con_Ema = new Est_Con_Ema();
         private Question est_Con_Com = new Est_Con_Com();
+
+        internal Question Est_Nam { get => est_Nam; set => est_Nam = value; }
+        internal Question Est_Web { get => est_Web; set => est_Web = value; }
+        internal Question Est_Sub { get => est_Sub; set => est_Sub = value; }
+        internal Question Est_Dat { get => est_Dat; set => est_Dat = value; }
+        internal Question Est_Str { get => est_Str; set => est_Str = value; }
+        internal Question Est_Cit { get => est_Cit; set => est_Cit = value; }
+        internal Question Est_Sta { get => est_Sta; set => est_Sta = value; }
+        internal Question Est_Zip { get => est_Zip; set => est_Zip = value; }
+        internal Question Est_Pho { get => est_Pho; set => est_Pho = value; }
+        internal Question Est_Tty { get => est_Tty; set => est_Tty = value; }
+        internal Question Est_Con_Fna { get => est_Con_Fna; set => est_Con_Fna = value; }
+        internal Question Est_Con_Lna { get => est_Con_Lna; set => est_Con_Lna = value; }
+        internal Question Est_Con_Tit { get => est_Con_Tit; set => est_Con_Tit = value; }
+        internal Question Est_Con_Ema { get => est_Con_Ema; set => est_Con_Ema = value; }
+        internal Question Est_Con_Com { get => est_Con_Com; set => est_Con_Com = value; }
 
         /*private string name;
         private string webSite;
