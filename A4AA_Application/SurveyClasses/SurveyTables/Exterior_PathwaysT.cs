@@ -4,7 +4,7 @@ using System.Text;
 
 namespace A4AA_Application.SurveyClasses.SurveyTables
 {
-    class Exterior_PathwaysT
+    public class Exterior_PathwaysT
     {
         private string service_animal;
         private string service_animal_location;

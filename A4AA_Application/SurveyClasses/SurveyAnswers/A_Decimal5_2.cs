@@ -4,7 +4,7 @@ using System.Text;
 
 namespace A4AA_Application.SurveyClasses.SurveyAnswers
 {
-    class A_Decimal5_2 : Answer
+    public class A_Decimal5_2 : Answer
     {
         private decimal data;
 

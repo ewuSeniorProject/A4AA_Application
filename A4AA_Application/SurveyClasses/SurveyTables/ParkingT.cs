@@ -4,7 +4,7 @@ using System.Text;
 
 namespace A4AA_Application.SurveyClasses.SurveyTables
 {
-    class ParkingT
+    public class ParkingT
     {
         private string lot_free;
         private string street_metered;

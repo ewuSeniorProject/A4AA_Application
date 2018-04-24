@@ -5,12 +5,12 @@ using A4AA_Application.SurveyClasses.SurveyAnswers;
 
 namespace A4AA_Application.SurveyClasses.SurveyQuestions
 {
-    class Est_Cit : Question
+    public class Est_Cit : Question
     {
         public Est_Cit()
         {
-            theAnswer = new A_Text255();
-            questionText = "City:";
+            TheAnswer = new A_Text255();
+            QuestionText = "City:";
         }
         //NEED SOME OBJECT OR LOGIC HERE WHICH WILL PROVIDE USER WITH DROP DOWN OF CORRECT POTENTIAL OPTIONS
     }

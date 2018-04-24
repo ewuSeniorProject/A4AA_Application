@@ -4,7 +4,7 @@ using System.Text;
 
 namespace A4AA_Application.SurveyClasses.SurveyAnswers
 {
-    class A_Date : Answer
+    public class A_Date : Answer
     {
         private DateTime data;
 

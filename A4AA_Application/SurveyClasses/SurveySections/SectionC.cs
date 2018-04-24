@@ -5,8 +5,16 @@ using A4AA_Application.SurveyClasses.SurveyTables;
 
 namespace A4AA_Application.SurveyClasses.SurveySections
 {
-    class SectionC
+    public class SectionC
     {
+        public SectionC()
+        {
+            exterior_PathwaysT = new Exterior_PathwaysT();
+            exterior_RampsT = new Exterior_RampsT();
+            exterior_StairsT = new Exterior_StairsT();
+            main_entranceT = new Main_EntranceT();
+        }
+
         private Exterior_PathwaysT exterior_PathwaysT;
         private Exterior_RampsT exterior_RampsT;
         private Exterior_StairsT exterior_StairsT;
