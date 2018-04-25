@@ -6,16 +6,17 @@ namespace A4AA_Application.SurveyClasses.SurveyAnswers
 {
     public class A_Date : Answer
     {
-        private DateTime data;
+        //private DateTime data;
+        private string data;
 
         public override void setAnswer(string s)
         {
-            
+            data = s;
         }
 
         public override string getAnswer()
         {
-            return data.ToString();
+            return data/*.ToString()*/;
         }
     }
 }
