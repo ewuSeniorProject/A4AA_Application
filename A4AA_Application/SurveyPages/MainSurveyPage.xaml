@@ -3,21 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="A4AA_Application.SurveyPages.MainSurveyPage">
 
-    <StackLayout  HorizontalOptions ="CenterAndExpand" >
-        <Label Text="Welcome to your survey!" FontSize="Large"/>
+    
+    <ScrollView>
+        <!--<Label Text="Welcome to your survey!" FontSize="Large"/>-->
         <StackLayout VerticalOptions="CenterAndExpand">
-            <Button Text="Survey Section A" Clicked="OnClickedA" />
-            <Button Text="Survey Section B" Clicked="OnClickedB" />
-            <Button Text="Survey Section C" Clicked="OnClickedC" />
-            <Button Text="Survey Section D" Clicked="OnClickedD" />
-            <Button Text="Survey Section E" Clicked="OnClickedE" />
-            <Button Text="Survey Section F" Clicked="OnClickedF" />
-            <Button Text="Survey Section G" Clicked="OnClickedG" />
-            <Button Text="Survey Section H" Clicked="OnClickedH" />
-            <Button Text="Survey Section I" Clicked="OnClickedI" />
-            <Button Text="Survey Section J" Clicked="OnClickedJ" />
+            <Button Text="Section A" Clicked="OnClickedA" />
+            <Button Text="Section B" Clicked="OnClickedB" />
+            <Button Text="Section C" Clicked="OnClickedC" />
+            <Button Text="Section D" Clicked="OnClickedD" />
+            <Button Text="Section E" Clicked="OnClickedE" />
+            <Button Text="Section F" Clicked="OnClickedF" />
+            <Button Text="Section G" Clicked="OnClickedG" />
+            <Button Text="Section H" Clicked="OnClickedH" />
+            <Button Text="Section I" Clicked="OnClickedI" />
+            <Button Text="Section J" Clicked="OnClickedJ" />
         </StackLayout>
-    </StackLayout>
+    </ScrollView>
     
     <!--<ContentPage.Content>
         <StackLayout>

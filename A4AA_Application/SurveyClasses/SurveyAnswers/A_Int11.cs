@@ -10,7 +10,7 @@ namespace A4AA_Application.SurveyClasses.SurveyAnswers
 
         public override void setAnswer(string s)
         {
-
+            data = Convert.ToInt32(s);
         }
 
         public override string getAnswer()

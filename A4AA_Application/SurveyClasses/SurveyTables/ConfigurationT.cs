@@ -9,6 +9,8 @@ namespace A4AA_Application.SurveyClasses.SurveyTables
     {
         private Question con_Nam = new Con_Nam();
 
+        public Question Con_Nam { get => con_Nam; set => con_Nam = value; }
+
         /*private string name;
 
         public string Name
