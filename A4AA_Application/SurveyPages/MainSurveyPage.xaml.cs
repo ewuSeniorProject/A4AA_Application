@@ -19,6 +19,7 @@ namespace A4AA_Application.SurveyPages
 		public MainSurveyPage ()
 		{
 			InitializeComponent();
+            this.Title = "Your Survey!";
             theSurvey = new Survey();
 			/*var layout = new StackLayout { Padding = new Thickness(5.0, 10.0) };
 
