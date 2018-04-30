@@ -19,7 +19,7 @@ namespace A4AA_Application.SurveyPages
 		public MainSurveyPage ()
 		{
 			InitializeComponent();
-            this.Title = "Your Survey!";
+            Title = "Your Survey!";
             theSurvey = new Survey();
 			/*var layout = new StackLayout { Padding = new Thickness(5.0, 10.0) };
 
@@ -49,7 +49,7 @@ namespace A4AA_Application.SurveyPages
 
         async void OnClickedA(object sender, EventArgs args)
         {
-            await Navigation.PushAsync(new SurveyPages.SurveySectionA(theSurvey));
+            await Navigation.PushAsync(new SurveySectionA(theSurvey));
         }
         async void OnClickedB(object sender, EventArgs args)
         {
@@ -61,15 +61,15 @@ namespace A4AA_Application.SurveyPages
         }
         async void OnClickedD(object sender, EventArgs args)
         {
-            //await Navigation.PushAsync(new SurveyPages.MainSurveyPage());
-        }
-        async void OnClickedE(object sender, EventArgs args)
+			await Navigation.PushAsync(new SurveySectionD(theSurvey));
+		}
+		async void OnClickedE(object sender, EventArgs args)
         {
-            //await Navigation.PushAsync(new SurveyPages.MainSurveyPage());
-        }
-        async void OnClickedF(object sender, EventArgs args)
+			await Navigation.PushAsync(new SurveySectionE(theSurvey));
+		}
+		async void OnClickedF(object sender, EventArgs args)
         {
-            //await Navigation.PushAsync(new SurveyPages.MainSurveyPage());
+            await Navigation.PushAsync(new SurveySectionF(theSurvey));
         }
         async void OnClickedG(object sender, EventArgs args)
         {

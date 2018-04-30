@@ -1,6 +1,11 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Web;
+//using CryptSharp;
+using System.Security.Cryptography;
+using System.IO;
+using System.Text;
 
 namespace A4AA_Application.Login
 {
@@ -44,7 +49,11 @@ namespace A4AA_Application.Login
 			String lname = Entries[1].Text;
 			String username = Entries[2].Text;
 			String email = Entries[4].Text;
-			String password = Entries[3].Text;
+			//String password = Crypter.SHA512.Crypt(Entries[3].Text);
+			//String password = Crypter.Crypt();
+			String password = "";
+			//System.Web.FormsAuthentication.HashPasswordForStoringInConfigFile(password, MD5);
+		
 
 			return new NewAccount(fname, lname, username, email, password);
 		}
@@ -140,3 +149,7 @@ namespace A4AA_Application.Login
 		}
 	}
 }
+
+
+
+

@@ -14,7 +14,7 @@ namespace A4AA_Application.SurveyClasses.SurveyAnswers
             this.size = size;
         }
 
-        public override void setAnswer(string s)
+		public override void setAnswer(string s)
         {
             if (s.Length > size)
             {
