@@ -4,7 +4,7 @@
              x:Class="A4AA_Application.SurveyPages.SurveySectionA">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout x:Name="theStackLayoutA">
+            <StackLayout x:Name="theStackLayout">
                 <!--<Label Text="SurveySectionAStuff!WOO!!!!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />-->
