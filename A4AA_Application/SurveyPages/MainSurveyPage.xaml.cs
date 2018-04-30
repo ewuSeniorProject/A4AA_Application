@@ -53,7 +53,7 @@ namespace A4AA_Application.SurveyPages
         }
         async void OnClickedB(object sender, EventArgs args)
         {
-            //await Navigation.PushAsync(new SurveyPages.MainSurveyPage());
+            await Navigation.PushAsync(new SurveyPages.SurveySectionB(theSurvey));
         }
         async void OnClickedC(object sender, EventArgs args)
         {
