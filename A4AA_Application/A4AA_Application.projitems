@@ -84,6 +84,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionA\Est_Nam.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionA\Cat_Nam.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\Question.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionD\Int_doo_ope_cle.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveySections\SectionA.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveySections\SectionB.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveySections\SectionC.cs" />
@@ -126,6 +127,15 @@
       <DependentUpon>SurveySectionB.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionD.xaml.cs">
+      <DependentUpon>SurveySectionD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionE.xaml.cs">
+      <DependentUpon>SurveySectionE.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionF.xaml.cs">
+      <DependentUpon>SurveySectionF.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Utils\Settings.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -144,5 +154,19 @@
     <Folder Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\misc\" />
     <Folder Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionB\" />
     <Folder Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionA\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionE.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 </Project>
