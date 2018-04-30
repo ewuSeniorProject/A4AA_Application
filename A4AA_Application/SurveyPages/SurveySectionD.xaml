@@ -4,7 +4,7 @@
              x:Class="A4AA_Application.SurveyPages.SurveySectionD">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout x:Name="theStackLayout">
+            <StackLayout x:Name="theStackLayoutD">
 
             </StackLayout>
         </ScrollView>

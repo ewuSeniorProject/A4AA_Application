@@ -157,17 +157,17 @@
     <Folder Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionA\" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionD.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionD.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionE.xaml">
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionE.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionF.xaml">
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionF.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

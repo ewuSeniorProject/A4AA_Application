@@ -21,7 +21,7 @@ namespace A4AA_Application.SurveyPages
 			InitializeComponent();
 			Title = "Section D";
 
-			var layout = this.FindByName<StackLayout>("theStackLayout");
+			var layout = this.FindByName<StackLayout>("theStackLayoutD");
 
 			//var int_doo_ope_cle = new Label(Text = SecD.InteriorT.Int_door_open_clearance.QuestionText)
 		}

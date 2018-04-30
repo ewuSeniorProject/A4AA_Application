@@ -18,7 +18,7 @@ namespace A4AA_Application.SurveyPages
 			InitializeComponent();
 			Title = "Section F";
 
-			var layout = this.FindByName<StackLayout>("theStackLayout");
+			var layout = this.FindByName<StackLayout>("theStackLayoutF");
 		}
 	}
 }

@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout>
             <ScrollView>
-                <StackLayout x:Name="theStackLayout">
+                <StackLayout x:Name="theStackLayoutF">
 
                 </StackLayout>
             </ScrollView>
