@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using A4AA_Application.SurveyClasses;
 using A4AA_Application.SurveyClasses.SurveyQuestions;
 
@@ -24,6 +20,8 @@ namespace A4AA_Application.SurveyPages
 
             var layout = this.FindByName<StackLayout>("theStackLayout");
 
+
+			//Questions
             var est_nam = new Label { Text = theSurvey.SectionA.EstablishmentT.Est_Nam.QuestionText , HorizontalTextAlignment = TextAlignment.Center, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label))};
             var est_nam_ans = new Entry { Placeholder = "Enter answer here..." };
             est_nam_ans.Completed += Est_nam_ans_Completed;
@@ -102,6 +100,7 @@ namespace A4AA_Application.SurveyPages
             }
             cat_nam_ans.SelectedIndexChanged += Cat_nam_ans_SelectedIndexChanged;
 
+			//adding elemetns to form
             layout.Children.Add(est_nam);
             layout.Children.Add(est_nam_ans);
             layout.Children.Add(est_dat);
@@ -138,6 +137,7 @@ namespace A4AA_Application.SurveyPages
             layout.Children.Add(est_con_com_ans);
         }
 
+		//Events
         private void Cat_nam_ans_SelectedIndexChanged(object sender, EventArgs e)
         {
             try

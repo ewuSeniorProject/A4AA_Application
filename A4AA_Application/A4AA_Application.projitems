@@ -34,6 +34,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Login\MD5Encrypt.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Login\CreateAccountPage.xaml.cs">
       <DependentUpon>CreateAccountPage.xaml</DependentUpon>
     </Compile>
@@ -65,6 +66,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\Par_Par_Typ.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\Par_Str_Met.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\Par_Lot_Fre.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionD\Int_doo_ope_cle.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\Use_Act.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\Use_Use_Rol.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\Use_Pas.cs" />
@@ -126,10 +128,40 @@
       <DependentUpon>SurveySectionA.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionD.xaml.cs">
+      <DependentUpon>SurveySectionD.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionE.xaml.cs">
+      <DependentUpon>SurveySectionE.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionF.xaml.cs">
+      <DependentUpon>SurveySectionF.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Utils\Settings.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionA.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionE.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionF.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>

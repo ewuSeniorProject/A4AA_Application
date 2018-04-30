@@ -7,10 +7,11 @@ namespace A4AA_Application.SurveyClasses.SurveyAnswers
     public class A_Text32 : Answer
     {
         private string data;
+		private int size;
 
         public override void setAnswer(string s)
         {
-            if (s.Length > 32)
+            if (s.Length > size)
             {
                 throw new ArgumentOutOfRangeException();
             }

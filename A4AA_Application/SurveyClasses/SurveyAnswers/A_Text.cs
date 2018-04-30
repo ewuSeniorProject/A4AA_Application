@@ -8,7 +8,7 @@ namespace A4AA_Application.SurveyClasses.SurveyAnswers
     {
         private string data;
 
-        public override void setAnswer(string s)
+		public override void setAnswer(string s)
         {
             data = s;
         }
