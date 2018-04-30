@@ -85,6 +85,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionA\Cat_Nam.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\Question.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionD\Int_doo_ope_cle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\YesNoQuestion.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveySections\SectionA.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveySections\SectionB.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveySections\SectionC.cs" />

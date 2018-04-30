@@ -17,11 +17,13 @@ namespace A4AA_Application.SurveyPages
 		{
 
 			this.theSurvey = theSurvey;
-			SectionD = theSurvey.SectionD;
+			SecD = theSurvey.SectionD;
 			InitializeComponent();
 			Title = "Section D";
 
 			var layout = this.FindByName<StackLayout>("theStackLayout");
+
+			//var int_doo_ope_cle = new Label(Text = SecD.InteriorT.Int_door_open_clearance.QuestionText)
 		}
 	}
 }
