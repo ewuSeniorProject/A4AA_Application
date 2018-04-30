@@ -4,7 +4,7 @@ using System.Text;
 
 namespace A4AA_Application.SurveyClasses.SurveyTables
 {
-    class RestroomT
+    public class RestroomT
     {
         private string public_restroom;
         private int total_num;

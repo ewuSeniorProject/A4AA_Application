@@ -4,7 +4,7 @@ using System.Text;
 
 namespace A4AA_Application.SurveyClasses.SurveyTables
 {
-    class STA_RouteT
+    public class STA_RouteT
     {
         private int route_num;
         private int north_bound_stop;

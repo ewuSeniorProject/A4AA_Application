@@ -5,8 +5,13 @@ using A4AA_Application.SurveyClasses.SurveyTables;
 
 namespace A4AA_Application.SurveyClasses.SurveySections
 {
-    class SectionD
+    public class SectionD
     {
+        public SectionD()
+        {
+            interiorT = new InteriorT();
+        }
+
         private InteriorT interiorT;
 
         public InteriorT InteriorT { get => interiorT; set => interiorT = value; }

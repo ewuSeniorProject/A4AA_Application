@@ -44,7 +44,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)simpleJsonClass.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\Survey.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyAnswers\Answer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyAnswers\A_Text32.cs" />
@@ -62,6 +61,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyAnswers\A_Decimal5_2.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyAnswers\A_Text8.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyAnswers\A_Text255.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\Use_Act.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\Use_Use_Rol.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\Use_Pas.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\Use_Lna.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\Use_Fna.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\Est_Con_Ema.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\Est_Con_Com.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\Est_Con_Tit.cs" />
@@ -119,9 +123,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Utils\Settings.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="$(MSBuildThisFileDirectory)surveyQuestions.txt" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionA.xaml">

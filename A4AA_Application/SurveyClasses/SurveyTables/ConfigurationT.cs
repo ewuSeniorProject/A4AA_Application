@@ -5,9 +5,11 @@ using A4AA_Application.SurveyClasses.SurveyQuestions;
 
 namespace A4AA_Application.SurveyClasses.SurveyTables
 {
-    class ConfigurationT
+    public class ConfigurationT
     {
         private Question con_Nam = new Con_Nam();
+
+        public Question Con_Nam { get => con_Nam; set => con_Nam = value; }
 
         /*private string name;
 
