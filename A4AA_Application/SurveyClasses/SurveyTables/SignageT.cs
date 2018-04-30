@@ -4,7 +4,7 @@ using System.Text;
 
 namespace A4AA_Application.SurveyClasses.SurveyTables
 {
-    class SignageT
+    public class SignageT
     {
         private string is_directory;
         private string door_signs;

@@ -5,27 +5,23 @@ using A4AA_Application.SurveyClasses.SurveyAnswers;
 
 namespace A4AA_Application.SurveyClasses.SurveyQuestions
 {
-    public class Con_Nam : Question
+    public class Par_Str_Met : Question
     {
         private string[] options;
 
-        public Con_Nam()
+        public Par_Str_Met()
         {
-            TheAnswer = new A_Text255();
-            QuestionText = "Premises Configuration:";
-            options = new string[]
+            TheAnswer = new A_Text24();
+            QuestionText = "Street Metered:";
+
+            options = new string[] 
             {
-                "Stand Alone",
-                "Inside Mall",
-                "Strip Mall",
-                "Office Building",
-                "Skywalk",
-                "Other (explain in comments)"
+                "Metered",
+                "Not Metered"
             };
         }
 
         public string[] Options { get => options; set => options = value; }
-
         //NEED SOME OBJECT OR LOGIC HERE WHICH WILL PROVIDE USER WITH DROP DOWN OF CORRECT POTENTIAL OPTIONS
     }
 }

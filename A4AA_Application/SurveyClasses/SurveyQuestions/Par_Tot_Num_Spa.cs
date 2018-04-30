@@ -5,12 +5,12 @@ using A4AA_Application.SurveyClasses.SurveyAnswers;
 
 namespace A4AA_Application.SurveyClasses.SurveyQuestions
 {
-    public class Est_Nam : Question
+    public class Par_Tot_Num_Spa : Question
     {
-        public Est_Nam()
+        public Par_Tot_Num_Spa()
         {
-            TheAnswer = new A_Text255();
-            QuestionText = "Establishment Name:";
+            TheAnswer = new A_Int11();
+            QuestionText = "Total number of parking spaces on premises:";
         }
         //NEED SOME OBJECT OR LOGIC HERE WHICH WILL PROVIDE USER WITH DROP DOWN OF CORRECT POTENTIAL OPTIONS
     }

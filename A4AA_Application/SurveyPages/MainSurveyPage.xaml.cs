@@ -14,9 +14,13 @@ namespace A4AA_Application.SurveyPages
 {
 	public partial class MainSurveyPage : ContentPage
 	{
+        private Survey theSurvey;
+
 		public MainSurveyPage ()
 		{
 			InitializeComponent();
+            this.Title = "Your Survey!";
+            theSurvey = new Survey();
 			/*var layout = new StackLayout { Padding = new Thickness(5.0, 10.0) };
 
             string[] separatedLines = loadQuestions();
@@ -45,7 +49,7 @@ namespace A4AA_Application.SurveyPages
 
         async void OnClickedA(object sender, EventArgs args)
         {
-            await Navigation.PushAsync(new SurveyPages.SurveySectionA());
+            await Navigation.PushAsync(new SurveyPages.SurveySectionA(theSurvey));
         }
         async void OnClickedB(object sender, EventArgs args)
         {

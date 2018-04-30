@@ -4,7 +4,7 @@ using System.Text;
 
 namespace A4AA_Application.SurveyClasses.SurveyTables
 {
-    class CommunicationT
+    public class CommunicationT
     {
         private string public_phone;
         private string phone_clearance;

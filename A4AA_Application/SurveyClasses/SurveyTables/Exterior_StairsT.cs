@@ -4,7 +4,7 @@ using System.Text;
 
 namespace A4AA_Application.SurveyClasses.SurveyTables
 {
-    class Exterior_StairsT
+    public class Exterior_StairsT
     {
         private string stairs_required;
         private string stairs_available;
