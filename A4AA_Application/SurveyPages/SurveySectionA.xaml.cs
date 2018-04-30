@@ -18,7 +18,7 @@ namespace A4AA_Application.SurveyPages
 			InitializeComponent ();
             this.Title = "Section A";
 
-            var layout = this.FindByName<StackLayout>("theStackLayout");
+            var layout = this.FindByName<StackLayout>("theStackLayoutA");
 
 
 			//Questions
@@ -180,7 +180,7 @@ namespace A4AA_Application.SurveyPages
             {
                 theSurvey.SectionA.EstablishmentT.Est_Con_Ema.TheAnswer.setAnswer(((Entry)sender).Text);
             }
-            catch (ArgumentOutOfRangeException)
+            catch (Exception)
             {
                 DisplayAlert("Error", "Please enter valid data. Your text was too long. Text for this answer is allowed to be up to 255 characters long.", "OK");
             }
@@ -192,7 +192,7 @@ namespace A4AA_Application.SurveyPages
             {
                 theSurvey.SectionA.EstablishmentT.Est_Con_Tit.TheAnswer.setAnswer(((Entry)sender).Text);
             }
-            catch (ArgumentOutOfRangeException)
+            catch (Exception)
             {
                 DisplayAlert("Error", "Please enter valid data. Your text was too long. Text for this answer is allowed to be up to 255 characters long.", "OK");
             }
@@ -204,7 +204,7 @@ namespace A4AA_Application.SurveyPages
             {
                 theSurvey.SectionA.EstablishmentT.Est_Con_Lna.TheAnswer.setAnswer(((Entry)sender).Text);
             }
-            catch (ArgumentOutOfRangeException)
+            catch (Exception)
             {
                 DisplayAlert("Error", "Please enter valid data. Your text was too long. Text for this answer is allowed to be up to 255 characters long.", "OK");
             }
@@ -216,7 +216,7 @@ namespace A4AA_Application.SurveyPages
             {
                 theSurvey.SectionA.EstablishmentT.Est_Con_Fna.TheAnswer.setAnswer(((Entry)sender).Text);
             }
-            catch (ArgumentOutOfRangeException)
+            catch (Exception)
             {
                 DisplayAlert("Error", "Please enter valid data. Your text was too long. Text for this answer is allowed to be up to 255 characters long.", "OK");
             }
@@ -228,7 +228,7 @@ namespace A4AA_Application.SurveyPages
             {
                 theSurvey.SectionA.EstablishmentT.Est_Tty.TheAnswer.setAnswer(((Entry)sender).Text);
             }
-            catch (ArgumentOutOfRangeException)
+            catch (Exception)
             {
                 DisplayAlert("Error", "Please enter valid data. Your text was too long. Text for this answer is allowed to be up to 32 characters long.", "OK");
             }
@@ -240,7 +240,7 @@ namespace A4AA_Application.SurveyPages
             {
                 theSurvey.SectionA.EstablishmentT.Est_Pho.TheAnswer.setAnswer(((Entry)sender).Text);
             }
-            catch (ArgumentOutOfRangeException)
+            catch (Exception)
             {
                 DisplayAlert("Error", "Please enter valid data. Your number was too long. This answer is allowed to be up to 32 characters long.", "OK");
             }
@@ -252,7 +252,7 @@ namespace A4AA_Application.SurveyPages
             {
                 theSurvey.SectionA.EstablishmentT.Est_Zip.TheAnswer.setAnswer(((Entry)sender).Text);
             }
-            catch (ArgumentOutOfRangeException)
+            catch (Exception)
             {
                 DisplayAlert("Error", "Please enter valid data. Your number was too long. This answer is allowed to be up to 11 characters long.", "OK");
             }
@@ -264,7 +264,7 @@ namespace A4AA_Application.SurveyPages
             {
                 theSurvey.SectionA.EstablishmentT.Est_Sta.TheAnswer.setAnswer(((Entry)sender).Text);
             }
-            catch (ArgumentOutOfRangeException)
+            catch (Exception)
             {
                 DisplayAlert("Error", "Please enter valid data. Your text was too long. Text for this answer is allowed to be up to 8 characters long. Consider abbreviations.", "OK");
             }
@@ -276,7 +276,7 @@ namespace A4AA_Application.SurveyPages
             {
                 theSurvey.SectionA.EstablishmentT.Est_Cit.TheAnswer.setAnswer(((Entry)sender).Text);
             }
-            catch (ArgumentOutOfRangeException)
+            catch (Exception)
             {
                 DisplayAlert("Error", "Please enter valid data. Your text was too long. Text for this answer is allowed to be up to 255 characters long.", "OK");
             }
@@ -288,7 +288,7 @@ namespace A4AA_Application.SurveyPages
             {
                 theSurvey.SectionA.EstablishmentT.Est_Str.TheAnswer.setAnswer(((Entry)sender).Text);
             }
-            catch (ArgumentOutOfRangeException)
+            catch (Exception)
             {
                 DisplayAlert("Error", "Please enter valid data. Your text was too long. Text for this answer is allowed to be up to 255 characters long.", "OK");
             }
@@ -305,7 +305,7 @@ namespace A4AA_Application.SurveyPages
             {
                 theSurvey.SectionA.EstablishmentT.Est_Sub.TheAnswer.setAnswer(((Entry)sender).Text);
             }
-            catch (ArgumentOutOfRangeException)
+            catch (Exception)
             {
                 DisplayAlert("Error", "Please enter valid data. Your text was too long. Text for this answer is allowed to be up to 255 characters long.", "OK");
             }
@@ -317,7 +317,7 @@ namespace A4AA_Application.SurveyPages
             {
                 theSurvey.SectionA.EstablishmentT.Est_Web.TheAnswer.setAnswer(((Entry)sender).Text);
             }
-            catch (ArgumentOutOfRangeException)
+            catch (Exception)
             {
                 DisplayAlert("Error", "Please enter valid data. Your text was too long. Text for this answer is allowed to be up to 255 characters long.", "OK");
             }
@@ -329,15 +329,10 @@ namespace A4AA_Application.SurveyPages
             {
                 theSurvey.SectionA.EstablishmentT.Est_Nam.TheAnswer.setAnswer(((Entry)sender).Text);
             }
-            catch (ArgumentOutOfRangeException)
+            catch (Exception)
             {
                 DisplayAlert("Error","Please enter valid data. Your text was too long. Text for this answer is allowed to be up to 255 characters long.","OK");
             }
-            /*DEBUG PURPOSES
-            var layout = this.FindByName<StackLayout>("theStackLayout");
-            var est_nam = new Label { Text = "SET ANSWER WAS CALLED:" + theSurvey.SectionA.EstablishmentT.Est_Nam.TheAnswer.getAnswer() };
-            layout.Children.Add(est_nam);
-            DEBUG PURPOSES*/
         }
     }
 }
