@@ -3,7 +3,7 @@ using System;
 
 namespace A4AA_Application.SurveyClasses.SurveyQuestions
 {
-	abstract class YesNoQuestion: Question
+	public abstract class YesNoQuestion: Question
     {
 		private string[] options;
 
@@ -15,7 +15,8 @@ namespace A4AA_Application.SurveyClasses.SurveyQuestions
 			options = new String[]
 			{
 				"Yes",
-				"No"
+				"No",
+                "N/A"
 			};
 		}
 

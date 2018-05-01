@@ -57,6 +57,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionB\Par_Res_Spa_Sig.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionB\Par_Num_Van_Acc.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionB\Par_Num_Res_Spa.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionB\STA_Bus_Sta_Ser_Are.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionB\Par_Tot_Num_Spa.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionB\Par_Par_Typ.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionB\Par_Str_Met.cs" />
@@ -128,6 +129,10 @@
       <DependentUpon>SurveySectionB.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionC.xaml.cs">
+      <DependentUpon>SurveySectionC.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionD.xaml.cs">
       <DependentUpon>SurveySectionD.xaml</DependentUpon>
     </Compile>
@@ -136,6 +141,22 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionF.xaml.cs">
       <DependentUpon>SurveySectionF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionG.xaml.cs">
+      <DependentUpon>SurveySectionG.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionH.xaml.cs">
+      <DependentUpon>SurveySectionH.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionI.xaml.cs">
+      <DependentUpon>SurveySectionI.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionJ.xaml.cs">
+      <DependentUpon>SurveySectionJ.xaml</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Utils\Settings.cs" />
   </ItemGroup>
@@ -153,7 +174,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\misc\" />
-    <Folder Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionB\" />
     <Folder Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionA\" />
   </ItemGroup>
   <ItemGroup>
@@ -166,6 +186,36 @@
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionG.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionH.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionJ.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
