@@ -10,24 +10,24 @@ namespace A4AA_Application.SurveyClasses.SurveyTables
 	{
 
 		private Question int_door_open_clearance = new Int_doo_ope_cle();
-		private Question int_opening_measurement;
-		private Question int_door_easy_open;
-		private Question int_door_open_force;
-		private Question int_door_use_with_fist;
-		private Question five_second_close;
-		private Question hallway_width;
-		private Question narrowest_width;
-		private Question wheelchair_turnaround;
-		private Question hallway_obstacles;
-		private Question hallway_clear;
-		private Question lighting;
-		private Question lighting_type;
-		private Question service_counter;
-		private Question counter_height;
-		private Question writing_surface_height;
-		private Question drinking_fountain;
-		private Question comment;
-		private Question recommendations;
+		private Question int_opening_measurement = new Int_ope_mea();
+		private Question int_door_easy_open = new Int_doo_eas_ope();
+		private Question int_door_open_force = new Int_doo_ope_for();
+		private Question int_door_use_with_fist = new Int_doo_ope_fis();
+		private Question five_second_close = new Fiv_sec_clo();
+		private Question hallway_width = new Hal_wid();
+		private Question narrowest_width = new Nar_wid();
+		private Question wheelchair_turnaround = new Whe_tur();
+		private Question hallway_obstacles = new Hal_obs();
+		private Question hallway_clear = new Hal_cle();
+		private Question lighting = new Lig();
+		private Question lighting_type = new Lig_Typ();
+		private Question service_counter = new Ser_cou();
+		private Question counter_height = new Cou_hei();
+		private Question writing_surface_height = new Wri_sur_hei();
+		private Question drinking_fountain = new Dri_fou();
+		private Question comment = new Comment("Type of obstacles, floor surface");
+		private Question recommendations = new Recommendations();
 
 		internal Question Int_door_open_clearance { get => int_door_open_clearance; set => int_door_open_clearance = value; }
 
