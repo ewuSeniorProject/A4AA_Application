@@ -34,6 +34,8 @@ namespace A4AA_Application.SurveyPages
 			}
 			int_doo_ope_cle_ans.SelectedIndexChanged += Int_doo_ope_cle_ansSelectedIndexChanged;
 
+
+
 			//Adding to the page
 			layout.Children.Add(int_doo_ope_cle);
 			layout.Children.Add(int_doo_ope_cle_ans);
