@@ -30,6 +30,25 @@ namespace A4AA_Application.SurveyClasses.SurveyTables
 		private Question recommendations = new Recommendations();
 
 		internal Question Int_door_open_clearance { get => int_door_open_clearance; set => int_door_open_clearance = value; }
+		internal Question Int_opening_measurment { get => int_opening_measurement; set => int_opening_measurement = value; }
+		internal Question Int_door_easy_open { get => int_door_easy_open; set => int_door_easy_open = value; }
+		internal Question Int_door_open_force { get => int_door_open_force; set => int_door_open_force = value; }
+		internal Question Int_door_use_with_fist { get => int_door_use_with_fist; set => int_door_use_with_fist = value; }
+		internal Question Five_second_close { get => five_second_close; set => five_second_close = value; }
+		internal Question Hallway_width { get => hallway_width; set => hallway_width = value; }
+		internal Question Narrowest_width { get => narrowest_width; set => narrowest_width = value; }
+		internal Question Wheelchair_turnaround { get => wheelchair_turnaround; set => wheelchair_turnaround = value; }
+		internal Question Hallway_obstacles { get => hallway_obstacles; set => hallway_obstacles = value; }
+		internal Question Hallway_clear { get => hallway_clear; set => hallway_clear = value; }
+		internal Question Lighting { get => lighting; set => lighting = value; }
+		internal Question Lighting_type { get => lighting_type; set => lighting_type = value; }
+		internal Question Service_counter { get => service_counter; set => service_counter = value; }
+		internal Question Counter_height { get => counter_height; set => counter_height = value; }
+		internal Question Writing_surface_height { get => writing_surface_height; set => writing_surface_height = value; }
+		internal Question Drinking_fountain { get => drinking_fountain; set => drinking_fountain = value; }
+		internal Question Comment { get => comment; set => comment = value; }
+		internal Question Recommendations { get => recommendations; set => recommendations = value; }
+
 
 		//public string Int_door_open_clearance
 		//{
