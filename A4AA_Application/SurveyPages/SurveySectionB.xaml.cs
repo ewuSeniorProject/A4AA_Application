@@ -115,6 +115,106 @@ namespace A4AA_Application.SurveyPages
             layout.Children.Add(par_com_ans);
             layout.Children.Add(par_rec);
             layout.Children.Add(par_rec_ans);
+
+            var rou_fro_par_dis = new Label { Text = theSurvey.SectionB.Route_From_ParkingT.Rou_Fro_Par_Dis.QuestionText, HorizontalTextAlignment = TextAlignment.Center, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
+            var rou_fro_par_dis_ans = new Entry { Placeholder = "Enter answer here...", Keyboard = Keyboard.Numeric };
+            rou_fro_par_dis_ans.Completed += Rou_fro_par_dis_ans_Completed;
+
+            var rou_fro_par_min_wid = new Label { Text = theSurvey.SectionB.Route_From_ParkingT.Rou_Fro_Par_Min_Wid.QuestionText, HorizontalTextAlignment = TextAlignment.Center, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
+            var rou_fro_par_min_wid_ans = new Picker { Title = "Yes or no?" };
+            var temp6 = (Rou_Fro_Par_Min_Wid)theSurvey.SectionB.Route_From_ParkingT.Rou_Fro_Par_Min_Wid;
+            foreach (string s in temp6.Options)
+            {
+                rou_fro_par_min_wid_ans.Items.Add(s);
+            }
+            rou_fro_par_min_wid_ans.SelectedIndexChanged += Rou_fro_par_min_wid_ans_SelectedIndexChanged;
+
+            var rou_fro_par_rou_sur = new Label { Text = theSurvey.SectionB.Route_From_ParkingT.Rou_Fro_Par_Rou_Sur.QuestionText, HorizontalTextAlignment = TextAlignment.Center, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
+            var rou_fro_par_rou_sur_ans = new Picker { Title = "Yes or no?" };
+            var temp7 = (Rou_Fro_Par_Rou_Sur)theSurvey.SectionB.Route_From_ParkingT.Rou_Fro_Par_Rou_Sur;
+            foreach (string s in temp7.Options)
+            {
+                rou_fro_par_rou_sur_ans.Items.Add(s);
+            }
+            rou_fro_par_rou_sur_ans.SelectedIndexChanged += Rou_fro_par_rou_sur_ans_SelectedIndexChanged;
+
+            var rou_fro_par_rou_cur = new Label { Text = theSurvey.SectionB.Route_From_ParkingT.Rou_Fro_Par_Rou_Cur.QuestionText, HorizontalTextAlignment = TextAlignment.Center, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
+            var rou_fro_par_rou_cur_ans = new Picker { Title = "Yes or no?" };
+            var temp8 = (Rou_Fro_Par_Rou_Cur)theSurvey.SectionB.Route_From_ParkingT.Rou_Fro_Par_Rou_Cur;
+            foreach (string s in temp8.Options)
+            {
+                rou_fro_par_rou_cur_ans.Items.Add(s);
+            }
+            rou_fro_par_rou_cur_ans.SelectedIndexChanged += Rou_fro_par_rou_cur_ans_SelectedIndexChanged;
+
+            var rou_fro_par_tac_war = new Label { Text = theSurvey.SectionB.Route_From_ParkingT.Rou_Fro_Par_Tac_War.QuestionText, HorizontalTextAlignment = TextAlignment.Center, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
+            var rou_fro_par_tac_war_ans = new Picker { Title = "Yes or no?" };
+            var temp9 = (Rou_Fro_Par_Tac_War)theSurvey.SectionB.Route_From_ParkingT.Rou_Fro_Par_Tac_War;
+            foreach (string s in temp9.Options)
+            {
+                rou_fro_par_tac_war_ans.Items.Add(s);
+            }
+            rou_fro_par_tac_war_ans.SelectedIndexChanged += Rou_fro_par_tac_war_ans_SelectedIndexChanged;
+        }
+
+        private void Rou_fro_par_tac_war_ans_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                theSurvey.SectionB.Route_From_ParkingT.Rou_Fro_Par_Tac_War.TheAnswer.setAnswer(((Picker)sender).SelectedItem.ToString());
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Error", "Unforseen error.", "OK");
+            }
+        }
+
+        private void Rou_fro_par_rou_cur_ans_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                theSurvey.SectionB.Route_From_ParkingT.Rou_Fro_Par_Rou_Cur.TheAnswer.setAnswer(((Picker)sender).SelectedItem.ToString());
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Error", "Unforseen error.", "OK");
+            }
+        }
+
+        private void Rou_fro_par_rou_sur_ans_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                theSurvey.SectionB.Route_From_ParkingT.Rou_Fro_Par_Rou_Sur.TheAnswer.setAnswer(((Picker)sender).SelectedItem.ToString());
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Error", "Unforseen error.", "OK");
+            }
+        }
+
+        private void Rou_fro_par_min_wid_ans_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                theSurvey.SectionB.Route_From_ParkingT.Rou_Fro_Par_Min_Wid.TheAnswer.setAnswer(((Picker)sender).SelectedItem.ToString());
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Error", "Unforseen error.", "OK");
+            }
+        }
+
+        private void Rou_fro_par_dis_ans_Completed(object sender, EventArgs e)
+        {
+            try
+            {
+                theSurvey.SectionB.Route_From_ParkingT.Rou_Fro_Par_Dis.TheAnswer.setAnswer(((Entry)sender).Text);
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Error", "Please enter valid data. This answer is allows 5 characters left of the decimal, and 2 to the right of the decimal.", "OK");
+            }
         }
 
         private void Par_rec_ans_Completed(object sender, EventArgs e)
