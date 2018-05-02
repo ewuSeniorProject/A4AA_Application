@@ -21,30 +21,6 @@ namespace A4AA_Application.SurveyPages
 			InitializeComponent();
             Title = "Your Survey!";
             theSurvey = new Survey();
-			/*var layout = new StackLayout { Padding = new Thickness(5.0, 10.0) };
-
-            string[] separatedLines = loadQuestions();
-            Survey theSurvey = new Survey();
-
-			foreach (string s in separatedLines)
-			{
-				//System.Diagnostics.Debug.WriteLine(s);
-				var label = new Label { FontSize = 20 };
-				var fs = new FormattedString();
-				fs.Spans.Add(new Span { Text = s });
-				label.FormattedText = fs;
-				layout.Children.Add(label);
-
-				var entry = new Entry { Placeholder = "Answer here..." };
-				layout.Children.Add(entry);
-			}
-
-
-
-			var scrollView = new ScrollView { Content = layout };
-			this.Content = scrollView;
-            */
-
 		}
 
         async void OnClickedA(object sender, EventArgs args)
@@ -53,11 +29,11 @@ namespace A4AA_Application.SurveyPages
         }
         async void OnClickedB(object sender, EventArgs args)
         {
-            await Navigation.PushAsync(new SurveyPages.SurveySectionB(theSurvey));
+            await Navigation.PushAsync(new SurveySectionB(theSurvey));
         }
         async void OnClickedC(object sender, EventArgs args)
         {
-            //await Navigation.PushAsync(new SurveyPages.MainSurveyPage());
+            await Navigation.PushAsync(new SurveySectionC(theSurvey));
         }
         async void OnClickedD(object sender, EventArgs args)
         {
@@ -73,19 +49,19 @@ namespace A4AA_Application.SurveyPages
         }
         async void OnClickedG(object sender, EventArgs args)
         {
-            //await Navigation.PushAsync(new SurveyPages.MainSurveyPage());
+            await Navigation.PushAsync(new SurveySectionG(theSurvey));
         }
         async void OnClickedH(object sender, EventArgs args)
         {
-            //await Navigation.PushAsync(new SurveyPages.MainSurveyPage());
+            await Navigation.PushAsync(new SurveySectionH(theSurvey));
         }
         async void OnClickedI(object sender, EventArgs args)
         {
-            //await Navigation.PushAsync(new SurveyPages.MainSurveyPage());
+            await Navigation.PushAsync(new SurveySectionI(theSurvey));
         }
         async void OnClickedJ(object sender, EventArgs args)
         {
-            //await Navigation.PushAsync(new SurveyPages.MainSurveyPage());
+            await Navigation.PushAsync(new SurveySectionJ(theSurvey));
         }
         /*
         private string[] loadQuestions()
