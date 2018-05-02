@@ -9,10 +9,6 @@ namespace A4AA_Application.SurveyClasses.SurveyTables
 	public class InteriorT
 	{
 
-
-		const double LARGEST_VALUE_ACCEPTED = 99999.99;
-		const int NUM_DIGITS_AFTER_DECIMAL = 2;
-
 		private Question int_door_open_clearance = new Int_doo_ope_cle();
 		private Question int_opening_measurement;
 		private Question int_door_easy_open;
@@ -32,6 +28,8 @@ namespace A4AA_Application.SurveyClasses.SurveyTables
 		private Question drinking_fountain;
 		private Question comment;
 		private Question recommendations;
+
+		internal Question Int_door_open_clearance { get => int_door_open_clearance; set => int_door_open_clearance = value; }
 
 		//public string Int_door_open_clearance
 		//{
