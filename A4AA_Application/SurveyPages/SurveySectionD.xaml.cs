@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections;
+using System.Reflection;
 using A4AA_Application.SurveyClasses;
 using A4AA_Application.SurveyClasses.SurveyQuestions;
-using A4AA_Application.SurveyClasses.SurveyQuestions.SectionD;
-using A4AA_Application.SurveyClasses.SurveySections;
+using A4AA_Application.SurveyClasses.SurveyTables;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,50 +13,139 @@ namespace A4AA_Application.SurveyPages
 	public partial class SurveySectionD : ContentPage
 	{
 		private Survey theSurvey;
-		private SectionD SecD;
+
+		private ArrayList QuestionLabels;
+		private ArrayList QuestionAnswerSpaces;
+		private InteriorT Table;
 
 		public SurveySectionD(Survey theSurvey)
 		{
 
 			this.theSurvey = theSurvey;
-			SecD = theSurvey.SectionD;
 			InitializeComponent();
 			Title = "Section D";
-
 			var layout = this.FindByName<StackLayout>("theStackLayoutD");
 
-			//Questions
-			var int_doo_ope_cle = new Label { Text = SecD.InteriorT.Int_door_open_clearance.QuestionText, HorizontalTextAlignment = TextAlignment.Center, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
-			var int_doo_ope_cle_ans = new Picker { Title = "Select Yes or No" };
-			Int_doo_ope_cle temp2 = (Int_doo_ope_cle)SecD.InteriorT.Int_door_open_clearance;
-			foreach (string s in temp2.Options)
+			QuestionLabels = new ArrayList();
+			QuestionAnswerSpaces = new ArrayList();
+
+			Table = theSurvey.SectionD.InteriorT;
+
+			PropertyInfo[] properties = typeof(InteriorT).GetProperties();
+			foreach (PropertyInfo prop in properties)
 			{
-				int_doo_ope_cle_ans.Items.Add(s);
+				Question q = (Question)prop.GetValue(Table);
+				String s = q.TheAnswer.GetType().ToString();
+				QuestionLabels.Add(CreateLabel(q));
+
+				if (q.HasOptions)
+				{
+					Picker p = genPicker();
+					AddToPicker(q, p);
+					p.SelectedIndexChanged += (sender, e) => SelectedIndexChanged(sender, e, q);
+
+				}
+				else if (s.Contains("Date"))
+				{
+					DatePicker dp = new DatePicker { };
+					QuestionAnswerSpaces.Add(dp);
+					dp.DateSelected += (sender, e) => SelectedDate(sender, e, q);
+				}
+				else if (s.Contains("Decimal") || s.Contains("Int"))
+				{
+					Entry e = new Entry { Placeholder = "Enter answer here...", Keyboard = Keyboard.Numeric };
+					EntryType(e, q);
+				}
+				else
+				{
+					Entry e = new Entry { Placeholder = "Enter answer here..." };
+					EntryType(e, q);
+				}
+
 			}
-			int_doo_ope_cle_ans.SelectedIndexChanged += Int_doo_ope_cle_ansSelectedIndexChanged;
-
-
 
 			//Adding to the page
-			layout.Children.Add(int_doo_ope_cle);
-			layout.Children.Add(int_doo_ope_cle_ans);
+			for (int i = 0; i < QuestionLabels.Count; i++)
+			{
+				layout.Children.Add((Label)QuestionLabels[i]);
+				layout.Children.Add((View)QuestionAnswerSpaces[i]);
+			}
 
 		}
 
+		private void EntryType(Entry ent, Question q)
+		{
+			
+				QuestionAnswerSpaces.Add(ent);
+				ent.Unfocused += (sender, e) => Ans_Completed(sender, e, q); ;
+		}
 
+		private void Ans_Completed(object sender, EventArgs e, Question q)
+		{
+			q.TheAnswer.setAnswer(((Entry)sender).Text);
+		}
 
-
-		//Events
-		private void Int_doo_ope_cle_ansSelectedIndexChanged(object sender, EventArgs e)
+		private void SelectedDate(object sender, DateChangedEventArgs e, Question q)
 		{
 			try
 			{
-				SecD.InteriorT.Int_door_open_clearance.TheAnswer.setAnswer(((Picker)sender).SelectedItem.ToString());
+				q.TheAnswer.setAnswer(((DatePicker)sender).Date.ToString());
 			}
 			catch (Exception)
 			{
 				DisplayAlert("Error", "Unforseen error.", "OK");
 			}
+		}
+
+		private void AddToPicker(Question q, Picker p)
+		{
+			QuestionAnswerSpaces.Add(p);
+			foreach (string s in q.Options)
+			{
+				p.Items.Add(s);
+			}
+
+		}
+
+		private Label CreateLabel(Question q)
+		{
+			Label l = new Label { Text = q.QuestionText, HorizontalTextAlignment = TextAlignment.Center, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
+
+			return l;
+
+		}
+
+		private Picker genPicker()
+		{
+			return new Picker { Title = "Select one" };
+		}
+
+
+		//Events
+		private void SelectedIndexChanged(object sender, EventArgs e, Question q)
+		{
+			try
+			{
+				q.TheAnswer.setAnswer(((Picker)sender).SelectedItem.ToString());
+			}
+			catch (Exception)
+			{
+				DisplayAlert("Error", "Unforseen error.", "OK");
+			}
+		}
+
+		public void Sub_but_clicked(object sender, EventArgs args)
+		{
+			String message = "";
+			PropertyInfo[] properties = typeof(InteriorT).GetProperties();
+			foreach (PropertyInfo prop in Table.GetType().GetProperties())
+			{
+				Question q = (Question)prop.GetValue(Table);
+				message += q.TheAnswer.getAnswer() + "\n";
+
+			}
+
+				DisplayAlert("Answers", message, "OK");
 		}
 	}
 }

@@ -5,7 +5,8 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout x:Name="theStackLayoutD">
-
+                
+                <Button Text="Submit" Clicked="Sub_but_clicked" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

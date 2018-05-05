@@ -31,13 +31,13 @@ namespace A4AA_Application.SurveyPages
         {
             await Navigation.PushAsync(new SurveySectionB(theSurvey));
         }
-        async void OnClickedC(object sender, EventArgs args)
+         void OnClickedC(object sender, EventArgs args)
         {
-            await Navigation.PushAsync(new SurveySectionC(theSurvey));
+             Navigation.PushAsync(new SurveySectionC(theSurvey));
         }
-        async void OnClickedD(object sender, EventArgs args)
+        void OnClickedD(object sender, EventArgs args)
         {
-			await Navigation.PushAsync(new SurveySectionD(theSurvey));
+			Navigation.PushAsync(new SurveySectionD(theSurvey));
 		}
 		async void OnClickedE(object sender, EventArgs args)
         {
@@ -49,7 +49,7 @@ namespace A4AA_Application.SurveyPages
         }
         async void OnClickedG(object sender, EventArgs args)
         {
-            await Navigation.PushAsync(new SurveySectionG(theSurvey));
+           await Navigation.PushAsync(new SurveySectionG(theSurvey));
         }
         async void OnClickedH(object sender, EventArgs args)
         {
