@@ -17,7 +17,8 @@ namespace A4AA_Application.SurveyClasses.SurveyQuestions
             options = new String[]
             {
                 "Yes",
-                "No"
+                "No",
+                "N/A"
             };
         }
 
