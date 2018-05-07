@@ -20,7 +20,7 @@ namespace A4AA_Application.SurveyPages
 		{
             this.theSurvey = theSurvey;
 			InitializeComponent ();
-            this.Title = "Section B";
+            this.Title = "Parking, Loading Zones, Bus Stops";
 
             var layout = this.FindByName<StackLayout>("theStackLayoutB");
 
@@ -349,6 +349,315 @@ namespace A4AA_Application.SurveyPages
                 pas_loa_des_zon_ans.Items.Add(s);
             }
             pas_loa_des_zon_ans.SelectedIndexChanged += Pas_loa_des_zon_ans_SelectedIndexChanged;
+
+            var pas_loa_dis = new Label { Text = theSurvey.SectionB.Passenger_LoadingT.Pas_Loa_Dis.QuestionText, HorizontalTextAlignment = TextAlignment.Center, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
+            var pas_loa_dis_ans = new Entry { Placeholder = "Enter answer here...", Keyboard = Keyboard.Numeric };
+            pas_loa_dis_ans.Completed += Pas_loa_dis_ans_Completed;
+
+            var pas_loa_min_wid = new Label { Text = theSurvey.SectionB.Passenger_LoadingT.Pas_Loa_Min_Wid.QuestionText, HorizontalTextAlignment = TextAlignment.Center, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
+            var pas_loa_min_wid_ans = new Picker { Title = "Yes or no?" };
+            var temp24 = (Pas_Loa_Min_Wid)theSurvey.SectionB.Passenger_LoadingT.Pas_Loa_Min_Wid;
+            foreach (string s in temp24.Options)
+            {
+                pas_loa_min_wid_ans.Items.Add(s);
+            }
+            pas_loa_min_wid_ans.SelectedIndexChanged += Pas_loa_min_wid_ans_SelectedIndexChanged;
+
+            var pas_loa_pas_sur = new Label { Text = theSurvey.SectionB.Passenger_LoadingT.Pas_Loa_Pas_Sur.QuestionText, HorizontalTextAlignment = TextAlignment.Center, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
+            var pas_loa_pas_sur_ans = new Picker { Title = "Yes or no?" };
+            var temp25 = (Pas_Loa_Pas_Sur)theSurvey.SectionB.Passenger_LoadingT.Pas_Loa_Pas_Sur;
+            foreach (string s in temp25.Options)
+            {
+                pas_loa_pas_sur_ans.Items.Add(s);
+            }
+            pas_loa_pas_sur_ans.SelectedIndexChanged += Pas_loa_pas_sur_ans_SelectedIndexChanged;
+
+            var pas_loa_tac_war_str = new Label { Text = theSurvey.SectionB.Passenger_LoadingT.Pas_Loa_Tac_War_Str.QuestionText, HorizontalTextAlignment = TextAlignment.Center, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
+            var pas_loa_tac_war_str_ans = new Picker { Title = "Yes or no?" };
+            var temp26 = (Pas_Loa_Tac_War_Str)theSurvey.SectionB.Passenger_LoadingT.Pas_Loa_Tac_War_Str;
+            foreach (string s in temp26.Options)
+            {
+                pas_loa_tac_war_str_ans.Items.Add(s);
+            }
+            pas_loa_tac_war_str_ans.SelectedIndexChanged += Pas_loa_tac_war_str_ans_SelectedIndexChanged;
+
+            var pas_loa_cov = new Label { Text = theSurvey.SectionB.Passenger_LoadingT.Pas_Loa_Cov.QuestionText, HorizontalTextAlignment = TextAlignment.Center, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
+            var pas_loa_cov_ans = new Picker { Title = "Yes or no?" };
+            var temp27 = (Pas_Loa_Cov)theSurvey.SectionB.Passenger_LoadingT.Pas_Loa_Cov;
+            foreach (string s in temp27.Options)
+            {
+                pas_loa_cov_ans.Items.Add(s);
+            }
+            pas_loa_cov_ans.SelectedIndexChanged += Pas_loa_cov_ans_SelectedIndexChanged;
+
+            var pas_loa_lig = new Label { Text = theSurvey.SectionB.Passenger_LoadingT.Pas_Loa_Lig.QuestionText, HorizontalTextAlignment = TextAlignment.Center, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
+            var pas_loa_lig_ans = new Picker { Title = "Yes or no?" };
+            var temp28 = (Pas_Loa_Lig)theSurvey.SectionB.Passenger_LoadingT.Pas_Loa_Lig;
+            foreach (string s in temp28.Options)
+            {
+                pas_loa_lig_ans.Items.Add(s);
+            }
+            pas_loa_lig_ans.SelectedIndexChanged += Pas_loa_lig_ans_SelectedIndexChanged;
+
+            var pas_loa_lig_opt = new Label { Text = theSurvey.SectionB.Passenger_LoadingT.Pas_Loa_Lig_Opt.QuestionText, HorizontalTextAlignment = TextAlignment.Center, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
+            var pas_loa_lig_opt_ans = new Picker { Title = "Day or night?" };
+            var temp29 = (Pas_Loa_Lig_Opt)theSurvey.SectionB.Passenger_LoadingT.Pas_Loa_Lig_Opt;
+            foreach (string s in temp29.Options)
+            {
+                pas_loa_lig_opt_ans.Items.Add(s);
+            }
+            pas_loa_lig_opt_ans.SelectedIndexChanged += Pas_loa_lig_opt_ans_SelectedIndexChanged;
+
+            var pas_loa_lig_typ = new Label { Text = theSurvey.SectionB.Passenger_LoadingT.Pas_Loa_Lig_Typ.QuestionText, HorizontalTextAlignment = TextAlignment.Center, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
+            var pas_loa_lig_typ_ans = new Picker { Title = "Low, medium or bright?" };
+            var temp30 = (Pas_Loa_Lig_Typ)theSurvey.SectionB.Passenger_LoadingT.Pas_Loa_Lig_Typ;
+            foreach (string s in temp30.Options)
+            {
+                pas_loa_lig_typ_ans.Items.Add(s);
+            }
+            pas_loa_lig_typ_ans.SelectedIndexChanged += Pas_loa_lig_typ_ans_SelectedIndexChanged;
+
+            var pas_loa_com = new Label { Text = theSurvey.SectionB.Passenger_LoadingT.Pas_Loa_Com.QuestionText, HorizontalTextAlignment = TextAlignment.Center, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
+            var pas_loa_com_ans = new Entry { Placeholder = "Enter answer here..." };
+            pas_loa_com_ans.Completed += Pas_loa_com_ans_Completed;
+
+            var pas_loa_rec = new Label { Text = theSurvey.SectionB.Passenger_LoadingT.Pas_Loa_Rec.QuestionText, HorizontalTextAlignment = TextAlignment.Center, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
+            var pas_loa_rec_ans = new Entry { Placeholder = "Enter answer here..." };
+            pas_loa_rec_ans.Completed += Pas_loa_rec_ans_Completed;
+
+            layout.Children.Add(pas_loa_des_zon);
+            layout.Children.Add(pas_loa_des_zon_ans);
+            layout.Children.Add(pas_loa_dis);
+            layout.Children.Add(pas_loa_dis_ans);
+            layout.Children.Add(pas_loa_min_wid);
+            layout.Children.Add(pas_loa_min_wid_ans);
+            layout.Children.Add(pas_loa_pas_sur);
+            layout.Children.Add(pas_loa_pas_sur_ans);
+            layout.Children.Add(pas_loa_tac_war_str);
+            layout.Children.Add(pas_loa_tac_war_str_ans);
+            layout.Children.Add(pas_loa_cov);
+            layout.Children.Add(pas_loa_cov_ans);
+            layout.Children.Add(pas_loa_lig);
+            layout.Children.Add(pas_loa_lig_ans);
+            layout.Children.Add(pas_loa_lig_opt);
+            layout.Children.Add(pas_loa_lig_opt_ans);
+            layout.Children.Add(pas_loa_lig_typ);
+            layout.Children.Add(pas_loa_lig_typ_ans);
+            layout.Children.Add(pas_loa_com);
+            layout.Children.Add(pas_loa_com_ans);
+            layout.Children.Add(pas_loa_rec);
+            layout.Children.Add(pas_loa_rec_ans);
+
+            var Sta_rou_rou_num = new Label { Text = theSurvey.SectionB.STA_RouteT.Sta_Rou_Rou_Num.QuestionText, HorizontalTextAlignment = TextAlignment.Center, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
+            var Sta_rou_rou_num_ans = new Entry { Placeholder = "Enter answer here...", Keyboard = Keyboard.Numeric };
+            Sta_rou_rou_num_ans.Completed += Sta_rou_rou_num_ans_Completed;
+
+            var Sta_rou_nor_bou_sto = new Label { Text = theSurvey.SectionB.STA_RouteT.Sta_Rou_Nor_Bou_Sto.QuestionText, HorizontalTextAlignment = TextAlignment.Center, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
+            var Sta_rou_nor_bou_sto_ans = new Entry { Placeholder = "Enter answer here...", Keyboard = Keyboard.Numeric };
+            Sta_rou_nor_bou_sto_ans.Completed += Sta_rou_nor_bou_sto_ans_Completed;
+
+            var Sta_rou_sou_bou_sto = new Label { Text = theSurvey.SectionB.STA_RouteT.Sta_Rou_Sou_Bou_Sto.QuestionText, HorizontalTextAlignment = TextAlignment.Center, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
+            var Sta_rou_sou_bou_sto_ans = new Entry { Placeholder = "Enter answer here...", Keyboard = Keyboard.Numeric };
+            Sta_rou_sou_bou_sto_ans.Completed += Sta_rou_sou_bou_sto_ans_Completed;
+
+            var Sta_rou_eas_bou_sto = new Label { Text = theSurvey.SectionB.STA_RouteT.Sta_Rou_Eas_Bou_Sto.QuestionText, HorizontalTextAlignment = TextAlignment.Center, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
+            var Sta_rou_eas_bou_sto_ans = new Entry { Placeholder = "Enter answer here...", Keyboard = Keyboard.Numeric };
+            Sta_rou_eas_bou_sto_ans.Completed += Sta_rou_eas_bou_sto_ans_Completed;
+
+            var Sta_rou_wes_bou_sto = new Label { Text = theSurvey.SectionB.STA_RouteT.Sta_Rou_Wes_Bou_Sto.QuestionText, HorizontalTextAlignment = TextAlignment.Center, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
+            var Sta_rou_wes_bou_sto_ans = new Entry { Placeholder = "Enter answer here...", Keyboard = Keyboard.Numeric };
+            Sta_rou_wes_bou_sto_ans.Completed += Sta_rou_wes_bou_sto_ans_Completed;
+
+            layout.Children.Add(Sta_rou_rou_num);
+            layout.Children.Add(Sta_rou_rou_num_ans);
+            layout.Children.Add(Sta_rou_nor_bou_sto);
+            layout.Children.Add(Sta_rou_nor_bou_sto_ans);
+            layout.Children.Add(Sta_rou_sou_bou_sto);
+            layout.Children.Add(Sta_rou_sou_bou_sto_ans);
+            layout.Children.Add(Sta_rou_eas_bou_sto);
+            layout.Children.Add(Sta_rou_eas_bou_sto_ans);
+            layout.Children.Add(Sta_rou_wes_bou_sto);
+            layout.Children.Add(Sta_rou_wes_bou_sto_ans);
+        }
+
+        private void Sta_rou_wes_bou_sto_ans_Completed(object sender, EventArgs e)
+        {
+            try
+            {
+                theSurvey.SectionB.STA_RouteT.Sta_Rou_Wes_Bou_Sto.TheAnswer.setAnswer(((Entry)sender).Text);
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Error", "Please enter valid data. Your number was too long. This answer is allowed to be up to 11 characters long.", "OK");
+            }
+        }
+
+        private void Sta_rou_eas_bou_sto_ans_Completed(object sender, EventArgs e)
+        {
+            try
+            {
+                theSurvey.SectionB.STA_RouteT.Sta_Rou_Eas_Bou_Sto.TheAnswer.setAnswer(((Entry)sender).Text);
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Error", "Please enter valid data. Your number was too long. This answer is allowed to be up to 11 characters long.", "OK");
+            }
+        }
+
+        private void Sta_rou_sou_bou_sto_ans_Completed(object sender, EventArgs e)
+        {
+            try
+            {
+                theSurvey.SectionB.STA_RouteT.Sta_Rou_Sou_Bou_Sto.TheAnswer.setAnswer(((Entry)sender).Text);
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Error", "Please enter valid data. Your number was too long. This answer is allowed to be up to 11 characters long.", "OK");
+            }
+        }
+
+        private void Sta_rou_nor_bou_sto_ans_Completed(object sender, EventArgs e)
+        {
+            try
+            {
+                theSurvey.SectionB.STA_RouteT.Sta_Rou_Nor_Bou_Sto.TheAnswer.setAnswer(((Entry)sender).Text);
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Error", "Please enter valid data. Your number was too long. This answer is allowed to be up to 11 characters long.", "OK");
+            }
+        }
+
+        private void Sta_rou_rou_num_ans_Completed(object sender, EventArgs e)
+        {
+            try
+            {
+                theSurvey.SectionB.STA_RouteT.Sta_Rou_Rou_Num.TheAnswer.setAnswer(((Entry)sender).Text);
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Error", "Please enter valid data. Your number was too long. This answer is allowed to be up to 11 characters long.", "OK");
+            }
+        }
+
+        private void Pas_loa_rec_ans_Completed(object sender, EventArgs e)
+        {
+            try
+            {
+                theSurvey.SectionB.Passenger_LoadingT.Pas_Loa_Rec.TheAnswer.setAnswer(((Entry)sender).Text);
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Error", "Unforseen error.", "OK");
+            }
+        }
+
+        private void Pas_loa_com_ans_Completed(object sender, EventArgs e)
+        {
+            try
+            {
+                theSurvey.SectionB.Passenger_LoadingT.Pas_Loa_Com.TheAnswer.setAnswer(((Entry)sender).Text);
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Error", "Unforseen error.", "OK");
+            }
+        }
+
+        private void Pas_loa_lig_typ_ans_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                theSurvey.SectionB.Passenger_LoadingT.Pas_Loa_Lig_Typ.TheAnswer.setAnswer(((Picker)sender).SelectedItem.ToString());
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Error", "Unforseen error.", "OK");
+            }
+        }
+
+        private void Pas_loa_lig_opt_ans_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                theSurvey.SectionB.Passenger_LoadingT.Pas_Loa_Lig_Opt.TheAnswer.setAnswer(((Picker)sender).SelectedItem.ToString());
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Error", "Unforseen error.", "OK");
+            }
+        }
+
+        private void Pas_loa_lig_ans_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                theSurvey.SectionB.Passenger_LoadingT.Pas_Loa_Lig.TheAnswer.setAnswer(((Picker)sender).SelectedItem.ToString());
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Error", "Unforseen error.", "OK");
+            }
+        }
+
+        private void Pas_loa_cov_ans_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                theSurvey.SectionB.Passenger_LoadingT.Pas_Loa_Cov.TheAnswer.setAnswer(((Picker)sender).SelectedItem.ToString());
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Error", "Unforseen error.", "OK");
+            }
+        }
+
+        private void Pas_loa_tac_war_str_ans_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                theSurvey.SectionB.Passenger_LoadingT.Pas_Loa_Tac_War_Str.TheAnswer.setAnswer(((Picker)sender).SelectedItem.ToString());
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Error", "Unforseen error.", "OK");
+            }
+        }
+
+        private void Pas_loa_pas_sur_ans_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                theSurvey.SectionB.Passenger_LoadingT.Pas_Loa_Pas_Sur.TheAnswer.setAnswer(((Picker)sender).SelectedItem.ToString());
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Error", "Unforseen error.", "OK");
+            }
+        }
+
+        private void Pas_loa_min_wid_ans_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                theSurvey.SectionB.Passenger_LoadingT.Pas_Loa_Min_Wid.TheAnswer.setAnswer(((Picker)sender).SelectedItem.ToString());
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Error", "Unforseen error.", "OK");
+            }
+        }
+
+        private void Pas_loa_dis_ans_Completed(object sender, EventArgs e)
+        {
+            try
+            {
+                theSurvey.SectionB.Passenger_LoadingT.Pas_Loa_Dis.TheAnswer.setAnswer(((Entry)sender).Text);
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Error", "Please enter valid data. This answer allows 5 characters left of the decimal, and 2 to the right of the decimal.", "OK");
+            }
         }
 
         private void Pas_loa_des_zon_ans_SelectedIndexChanged(object sender, EventArgs e)
@@ -491,7 +800,7 @@ namespace A4AA_Application.SurveyPages
             }
             catch (Exception)
             {
-                DisplayAlert("Error", "Please enter valid data. This answer is allows 5 characters left of the decimal, and 2 to the right of the decimal.", "OK");
+                DisplayAlert("Error", "Please enter valid data. This answer allows 5 characters left of the decimal, and 2 to the right of the decimal.", "OK");
             }
         }
 
@@ -635,7 +944,7 @@ namespace A4AA_Application.SurveyPages
             }
             catch (Exception)
             {
-                DisplayAlert("Error", "Please enter valid data. This answer is allows 5 characters left of the decimal, and 2 to the right of the decimal.", "OK");
+                DisplayAlert("Error", "Please enter valid data. This answer allows 5 characters left of the decimal, and 2 to the right of the decimal.", "OK");
             }
         }
 
