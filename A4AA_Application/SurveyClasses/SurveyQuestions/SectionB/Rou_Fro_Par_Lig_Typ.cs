@@ -5,12 +5,12 @@ using A4AA_Application.SurveyClasses.SurveyAnswers;
 
 namespace A4AA_Application.SurveyClasses.SurveyQuestions
 {
-    public class Rou_Fro_Par_Lig_Typ : Question
+    public class Rou_Fro_Par_Lig_Typ : Lig_Typ
     {
         //private string[] options;
 
-        public Rou_Fro_Par_Lig_Typ()
-        {
+        public Rou_Fro_Par_Lig_Typ() : base() { }
+        /*{
             TheAnswer = new A_Text(32);
             QuestionText = "Brightness level:";
             HasOptions = true;
@@ -21,7 +21,7 @@ namespace A4AA_Application.SurveyClasses.SurveyQuestions
                 "Medium",
                 "Bright"
             };
-        }
+        }*/
 
         //public string[] Options { get => options; set => options = value; }
         //NEED SOME OBJECT OR LOGIC HERE WHICH WILL PROVIDE USER WITH DROP DOWN OF CORRECT POTENTIAL OPTIONS

@@ -5,12 +5,12 @@ using A4AA_Application.SurveyClasses.SurveyAnswers;
 
 namespace A4AA_Application.SurveyClasses.SurveyQuestions
 {
-    public class Pas_Loa_Lig_Opt : Question
+    public class Pas_Loa_Lig_Opt : Lig_Opt
     {
         //private string[] options;
 
-        public Pas_Loa_Lig_Opt()
-        {
+        public Pas_Loa_Lig_Opt() : base() { }
+        /*{
             TheAnswer = new A_Text(32);
             QuestionText = "Day or night?";
             HasOptions = true;
@@ -20,7 +20,7 @@ namespace A4AA_Application.SurveyClasses.SurveyQuestions
                 "Day",
                 "Night"
             };
-        }
+        }*/
 
         //public string[] Options { get => options; set => options = value; }
         //NEED SOME OBJECT OR LOGIC HERE WHICH WILL PROVIDE USER WITH DROP DOWN OF CORRECT POTENTIAL OPTIONS
