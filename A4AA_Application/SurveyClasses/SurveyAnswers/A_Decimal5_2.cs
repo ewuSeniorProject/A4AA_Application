@@ -10,12 +10,18 @@ namespace A4AA_Application.SurveyClasses.SurveyAnswers
 
         public override void setAnswer(string s)
         {
-            string[] temp = s.Split('.');
-            if (temp[0].Length > 5 || temp[1].Length > 2)
-            {
-                throw new ArgumentOutOfRangeException();
-            }
-            data = Convert.ToDecimal(s);
+			if (s != null && !s.Equals(""))
+			{
+				if (s.Contains("."))
+				{
+					string[] temp = s.Split('.');
+					if (temp[0].Length > 5 || temp[1].Length > 2)
+					{
+						throw new ArgumentOutOfRangeException();
+					}
+				}
+				data = Convert.ToDecimal(s);
+			}
         }
 
         public override string getAnswer()

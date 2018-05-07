@@ -16,11 +16,14 @@ namespace A4AA_Application.SurveyClasses.SurveyAnswers
 
 		public override void setAnswer(string s)
         {
-            if (s.Length > size)
-            {
-                throw new ArgumentOutOfRangeException();
-            }
-            data = s;
+			if (s != null)
+			{
+				if (s.Length > size)
+				{
+					throw new ArgumentOutOfRangeException();
+				}
+				data = s;
+			}
         }
 
         public override string getAnswer()
