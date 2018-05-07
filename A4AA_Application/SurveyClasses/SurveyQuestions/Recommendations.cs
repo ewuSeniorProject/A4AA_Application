@@ -10,7 +10,7 @@ namespace A4AA_Application.SurveyClasses.SurveyQuestions
 		public Recommendations()
 		{
 			TheAnswer = new A_Text(5000);
-			QuestionText = "Comments: ";
+			QuestionText = "Recommendations: ";
 		}
     }
 }

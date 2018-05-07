@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace A4AA_Application.SurveyClasses.SurveyQuestions.SectionD
+namespace A4AA_Application.SurveyClasses.SurveyQuestions
 {
     class Lig : YesNoQuestion
     {

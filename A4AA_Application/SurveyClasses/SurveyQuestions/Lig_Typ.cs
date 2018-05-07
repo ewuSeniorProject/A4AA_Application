@@ -1,15 +1,16 @@
 ﻿using A4AA_Application.SurveyClasses.SurveyAnswers;
 
-namespace A4AA_Application.SurveyClasses.SurveyQuestions.SectionD
+namespace A4AA_Application.SurveyClasses.SurveyQuestions
 {
     class Lig_Typ : Question
     {
-		private string[] options;
+		
 
 		public Lig_Typ()
 		{
 			TheAnswer = new A_Text(255);
-			QuestionText = "Category of Establishment:";
+			QuestionText = "Lighting Type";
+			HasOptions = true;
 
 			options = new string[]
 			{
@@ -18,6 +19,5 @@ namespace A4AA_Application.SurveyClasses.SurveyQuestions.SectionD
 				"Bright"
 			};
 		}
-		public string[] Options { get => options; set => options = value; }
 	}
 }

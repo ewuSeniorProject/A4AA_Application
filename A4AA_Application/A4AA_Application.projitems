@@ -136,11 +136,32 @@
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionD\Int_doo_ope_fis.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionD\Int_doo_ope_for.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionD\Int_ope_mea.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionD\Lig.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionD\Lig_Typ.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\Lig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\Lig_Typ.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionD\Nar_wid.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionD\Ser_cou.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionD\Whe_tur.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionE\Audible_tones.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionE\Braille.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionE\Button_height.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionE\Button_use_fist.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionE\Elevator_depth.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionE\Inside_btn_height.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionE\Is_elevator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionE\Location.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionE\No_assist.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionE\Outside_btn_height.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionE\Works.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionF\Alt_inf.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionF\Alt_inf_typ.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionF\Doo_sig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionF\Is_dir.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionF\Men_acc.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionF\Pub_sig_bra.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionF\Sig_hei.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionF\Sig_hig_con.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionF\Sig_img.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionF\Wri_mat.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\YesNoQuestion.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveySections\SectionA.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveySections\SectionB.cs" />
@@ -155,7 +176,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyTables\CategoryT.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyTables\CommunicationT.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyTables\ConfigurationT.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyTables\Cou_hei.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionD\Cou_hei.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyTables\ElevatorT.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyTables\EmergencyT.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyTables\EstablishmentT.cs" />
@@ -174,7 +195,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyTables\STA_BusT.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyTables\STA_RouteT.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyTables\UserT.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyTables\Wri_sur_hei.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionD\Wri_sur_hei.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyPages\MainSurveyPage.xaml.cs">
       <DependentUpon>MainSurveyPage.xaml</DependentUpon>
     </Compile>

@@ -44,5 +44,3 @@ namespace A4AA_Application.SurveyClasses
         public SectionJ SectionJ { get => sectionJ; set => sectionJ = value; }
     }
 }
-
-//blake's comment
