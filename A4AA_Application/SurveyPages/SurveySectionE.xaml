@@ -6,7 +6,7 @@
         <StackLayout>
             <ScrollView>
                 <StackLayout x:Name="theStackLayoutE">
-                    <Button Text="Submit" Clicked="Sub_but_clicked" />
+                   
                 </StackLayout>
             </ScrollView>
         </StackLayout>
