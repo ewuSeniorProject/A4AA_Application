@@ -7,12 +7,13 @@ namespace A4AA_Application.SurveyClasses.SurveyQuestions
 {
     public class Cat_Nam : Question
     {
-        private string[] options;
+        //private string[] options;
 
         public Cat_Nam()
         {
             TheAnswer = new A_Text(255);
             QuestionText = "Category of Establishment:";
+            HasOptions = true;
 
             options = new string[] 
             {
@@ -35,7 +36,7 @@ namespace A4AA_Application.SurveyClasses.SurveyQuestions
             };
         }
 
-        public string[] Options { get => options; set => options = value; }
+        //public string[] Options { get => options; set => options = value; }
         //NEED SOME OBJECT OR LOGIC HERE WHICH WILL PROVIDE USER WITH DROP DOWN OF CORRECT POTENTIAL OPTIONS
     }
 }

@@ -7,12 +7,13 @@ namespace A4AA_Application.SurveyClasses.SurveyQuestions
 {
     public class Par_Str_Met : Question
     {
-        private string[] options;
+        //private string[] options;
 
         public Par_Str_Met()
         {
             TheAnswer = new A_Text(24);
             QuestionText = "Street Metered:";
+            HasOptions = true;
 
             options = new string[] 
             {
@@ -21,7 +22,7 @@ namespace A4AA_Application.SurveyClasses.SurveyQuestions
             };
         }
 
-        public string[] Options { get => options; set => options = value; }
+        //public string[] Options { get => options; set => options = value; }
         //NEED SOME OBJECT OR LOGIC HERE WHICH WILL PROVIDE USER WITH DROP DOWN OF CORRECT POTENTIAL OPTIONS
     }
 }
