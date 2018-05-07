@@ -77,7 +77,7 @@ namespace A4AA_Application.SurveyPages
 		{
 			
 				QuestionAnswerSpaces.Add(ent);
-				ent.Unfocused += (sender, e) => Ans_Completed(sender, e, q); ;
+				ent.Unfocused += (sender, e) => Ans_Completed(sender, e, q); 
 		}
 
 		private void Ans_Completed(object sender, EventArgs e, Question q)
