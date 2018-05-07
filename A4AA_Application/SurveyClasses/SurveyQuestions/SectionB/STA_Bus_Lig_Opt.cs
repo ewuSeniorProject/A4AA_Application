@@ -7,12 +7,13 @@ namespace A4AA_Application.SurveyClasses.SurveyQuestions
 {
     public class STA_Bus_Lig_Opt : Question
     {
-        private string[] options;
+        //private string[] options;
 
         public STA_Bus_Lig_Opt()
         {
             TheAnswer = new A_Text(32);
             QuestionText = "Day or night?";
+            HasOptions = true;
 
             options = new string[] 
             {
@@ -21,7 +22,7 @@ namespace A4AA_Application.SurveyClasses.SurveyQuestions
             };
         }
 
-        public string[] Options { get => options; set => options = value; }
+        //public string[] Options { get => options; set => options = value; }
         //NEED SOME OBJECT OR LOGIC HERE WHICH WILL PROVIDE USER WITH DROP DOWN OF CORRECT POTENTIAL OPTIONS
     }
 }

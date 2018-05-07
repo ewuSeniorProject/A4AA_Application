@@ -5,9 +5,8 @@ using A4AA_Application.SurveyClasses.SurveyAnswers;
 
 namespace A4AA_Application.SurveyClasses.SurveyQuestions
 {
-    public class Par_Rec : Recommendations
+    public class Ext_Pat_Pat_Sur : YesNoQuestion
     {
-        public Par_Rec() : base() { }
-        //NEED SOME OBJECT OR LOGIC HERE WHICH WILL PROVIDE USER WITH DROP DOWN OF CORRECT POTENTIAL OPTIONS
+        public Ext_Pat_Pat_Sur() : base("Pathway surfaces are level, unbroken, firm, and slip resistant.") { }
     }
 }

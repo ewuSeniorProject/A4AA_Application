@@ -16,7 +16,7 @@ namespace A4AA_Application.SurveyPages
 		{
             this.theSurvey = theSurvey;
 			InitializeComponent ();
-            this.Title = "Section A";
+            this.Title = "Premises Information";
 
             var layout = this.FindByName<StackLayout>("theStackLayoutA");
 

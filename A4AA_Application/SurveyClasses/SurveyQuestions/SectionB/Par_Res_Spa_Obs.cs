@@ -7,21 +7,23 @@ namespace A4AA_Application.SurveyClasses.SurveyQuestions
 {
     public class Par_Res_Spa_Obs : Question
     {
-        private string[] options;
+        //private string[] options;
 
         public Par_Res_Spa_Obs()
         {
             TheAnswer = new A_Text(24);
             QuestionText = "Is reserved parking free of obstacles?:";
+            HasOptions = true;
 
             options = new String[]
             {
                 "Yes",
-                "No"
+                "No",
+                "N/A"
             };
         }
 
-        public string[] Options { get => options; set => options = value; }
+        //public string[] Options { get => options; set => options = value; }
         //NEED SOME OBJECT OR LOGIC HERE WHICH WILL PROVIDE USER WITH DROP DOWN OF CORRECT POTENTIAL OPTIONS
     }
 }

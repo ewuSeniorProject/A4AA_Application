@@ -7,12 +7,14 @@ namespace A4AA_Application.SurveyClasses.SurveyQuestions
 {
     public class Con_Nam : Question
     {
-        private string[] options;
+        //private string[] options;
 
         public Con_Nam()
         {
             TheAnswer = new A_Text(255);
             QuestionText = "Premises Configuration:";
+            HasOptions = true;
+
             options = new string[]
             {
                 "Stand Alone",
@@ -24,7 +26,7 @@ namespace A4AA_Application.SurveyClasses.SurveyQuestions
             };
         }
 
-        public string[] Options { get => options; set => options = value; }
+        //public string[] Options { get => options; set => options = value; }
 
         //NEED SOME OBJECT OR LOGIC HERE WHICH WILL PROVIDE USER WITH DROP DOWN OF CORRECT POTENTIAL OPTIONS
     }

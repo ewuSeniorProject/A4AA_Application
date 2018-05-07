@@ -2,21 +2,20 @@
 
 namespace A4AA_Application.SurveyClasses.SurveyQuestions
 {
-    class Lig_Typ : Question
+    class Lig_Opt : Question
     {
 		
 
-		public Lig_Typ()
+		public Lig_Opt()
 		{
 			TheAnswer = new A_Text(255);
-			QuestionText = "Lighting Type:";
+			QuestionText = "Lighting Option:";
 			HasOptions = true;
 
 			options = new string[]
 			{
-				"Low",
-				"Medium",
-				"Bright"
+				"Day",
+                "Night"
 			};
 		}
 	}

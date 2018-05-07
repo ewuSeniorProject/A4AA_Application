@@ -5,20 +5,20 @@ using A4AA_Application.SurveyClasses.SurveyAnswers;
 
 namespace A4AA_Application.SurveyClasses.SurveyQuestions
 {
-    public class Par_Str_Met : Question
+    public class Ext_Pat_Lig_Opt : Question
     {
         //private string[] options;
 
-        public Par_Str_Met()
+        public Ext_Pat_Lig_Opt()
         {
-            TheAnswer = new A_Text(24);
-            QuestionText = "Street Metered:";
+            TheAnswer = new A_Text(32);
+            QuestionText = "Day or night?";
             HasOptions = true;
 
             options = new string[] 
             {
-                "Metered",
-                "Not Metered"
+                "Day",
+                "Night"
             };
         }
 

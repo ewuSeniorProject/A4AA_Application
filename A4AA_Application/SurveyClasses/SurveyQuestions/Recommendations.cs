@@ -5,7 +5,7 @@ using System.Text;
 
 namespace A4AA_Application.SurveyClasses.SurveyQuestions
 {
-    class Recommendations : Question
+    public class Recommendations : Question
     {
 		public Recommendations()
 		{

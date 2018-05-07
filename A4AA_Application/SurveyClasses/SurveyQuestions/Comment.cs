@@ -3,7 +3,7 @@ using System;
 
 namespace A4AA_Application.SurveyClasses.SurveyQuestions
 {
-    class Comment : Question
+    public class Comment : Question
     {
 		public Comment(String additional_words)
 		{
