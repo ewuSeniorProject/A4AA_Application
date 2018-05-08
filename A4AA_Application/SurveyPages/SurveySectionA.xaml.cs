@@ -39,8 +39,27 @@ namespace A4AA_Application.SurveyPages
             {
                 Question q = (Question)prop.GetValue(table1);
                 String s = q.TheAnswer.GetType().ToString();
+
+                String ts = q.GetType().ToString();
+
+                if (ts.Contains("Est_Sub"))
+                {
+                    Question q2 = theSurvey.SectionA.CategoryT.Cat_Nam;
+                    QuestionLabels.Add(CreateLabel(q2));
+                    Picker p2 = genPicker();
+                    AddToPicker(q2, p2);
+                    p2.SelectedIndexChanged += (sender, e) => SelectedIndexChanged(sender, e, q2);
+                }
+                if (ts.Contains("Est_Dat"))
+                {
+                    Question q2 = theSurvey.SectionA.ConfigurationT.Con_Nam;
+                    QuestionLabels.Add(CreateLabel(q2));
+                    Picker p2 = genPicker();
+                    AddToPicker(q2, p2);
+                    p2.SelectedIndexChanged += (sender, e) => SelectedIndexChanged(sender, e, q2);
+                }
+
                 QuestionLabels.Add(CreateLabel(q));
-                
                 if (q.HasOptions)
                 {
                     Picker p = genPicker();
@@ -54,7 +73,7 @@ namespace A4AA_Application.SurveyPages
                     QuestionAnswerSpaces.Add(dp);
                     dp.DateSelected += (sender, e) => SelectedDate(sender, e, q);
                 }
-                else if (s.Contains("Decimal") || s.Contains("Int"))
+                else if (s.Contains("Decimal") || s.Contains("Int") || ts.Contains("Est_Pho") || ts.Contains("Est_Tty"))
                 {
                     Entry e = new Entry { Placeholder = "Enter answer here...", Keyboard = Keyboard.Numeric };
                     EntryType(e, q);
@@ -66,7 +85,7 @@ namespace A4AA_Application.SurveyPages
                 }
             }
             
-            PropertyInfo[] properties2 = typeof(ConfigurationT).GetProperties();
+            /*PropertyInfo[] properties2 = typeof(ConfigurationT).GetProperties();
             foreach (PropertyInfo prop in properties2)
             {
                 Question q = (Question)prop.GetValue(table2);
@@ -128,7 +147,7 @@ namespace A4AA_Application.SurveyPages
                     Entry e = new Entry { Placeholder = "Enter answer here..." };
                     EntryType(e, q);
                 }
-            }
+            }*/
 
             for (int i = 0; i < QuestionLabels.Count; i++)
             {
@@ -266,7 +285,7 @@ namespace A4AA_Application.SurveyPages
             }
             catch (Exception)
             {
-                DisplayAlert("Error", "Unforseen error.", "OK");
+                DisplayAlert("Error", q.ErrorMessage, "OK");
             }
         }
 
@@ -319,7 +338,7 @@ namespace A4AA_Application.SurveyPages
             }
         }
 
-        public void Sub_but_clicked(object sender, EventArgs args)
+        /*public void Sub_but_clicked(object sender, EventArgs args)
         {
             String message = "";
             PropertyInfo[] properties = typeof(EstablishmentT).GetProperties();
@@ -347,7 +366,7 @@ namespace A4AA_Application.SurveyPages
             }
 
             DisplayAlert("Answers", message, "OK");
-        }
+        }*/
 
         /*
 		//Events

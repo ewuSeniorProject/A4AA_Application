@@ -11,6 +11,7 @@ namespace A4AA_Application.SurveyClasses.SurveyQuestions
         {
             TheAnswer = new A_Text(255);
             QuestionText = "If there is a service animal relief area, where is it located?";
+            ErrorMessage = "Invalid data. 255 characters allowed.";
         }
     }
 }
