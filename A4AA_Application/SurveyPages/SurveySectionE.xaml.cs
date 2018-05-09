@@ -87,7 +87,14 @@ namespace A4AA_Application.SurveyPages
 
 		private void Ans_Completed(object sender, EventArgs e, Question q)
 		{
-			q.TheAnswer.setAnswer(((Entry)sender).Text);
+			try
+			{
+				q.TheAnswer.setAnswer(((Entry)sender).Text);
+			}
+			catch (Exception)
+			{
+				DisplayAlert("Error", q.TheAnswer.getErrorMessage(), "OK");
+			}
 		}
 
 		private void SelectedDate(object sender, DateChangedEventArgs e, Question q)
