@@ -18,6 +18,11 @@ namespace A4AA_Application.SurveyClasses.SurveyAnswers
         {
             return data/*.ToString()*/;
         }
+
+        public override string getErrorMessage()
+        {
+            return "Invalid data. Unforseen error.";
+        }
     }
 }
 

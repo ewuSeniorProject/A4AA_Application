@@ -30,5 +30,10 @@ namespace A4AA_Application.SurveyClasses.SurveyAnswers
         {
             return data;
         }
+
+        public override string getErrorMessage()
+        {
+            return "Invalid data. " + size + " characters allowed.";
+        }
     }
 }

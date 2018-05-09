@@ -8,5 +8,6 @@ namespace A4AA_Application.SurveyClasses.SurveyAnswers
     {
         public abstract void setAnswer(string s);
         public abstract string getAnswer();
+        public abstract string getErrorMessage();
     }
 }
