@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections;
+using System.Reflection;
 using A4AA_Application.SurveyClasses;
 using A4AA_Application.SurveyClasses.SurveyQuestions;
-
+using A4AA_Application.SurveyClasses.SurveyTables;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,16 +14,148 @@ namespace A4AA_Application.SurveyPages
 	{
         private Survey theSurvey;
 
+        private ArrayList QuestionLabels;
+        private ArrayList QuestionAnswerSpaces;
+        private EstablishmentT table1;
+        private ConfigurationT table2;
+        private CategoryT table3;
+
 		public SurveySectionA ( Survey theSurvey )
 		{
             this.theSurvey = theSurvey;
 			InitializeComponent ();
             this.Title = "Premises Information";
-
             var layout = this.FindByName<StackLayout>("theStackLayoutA");
 
+            QuestionLabels = new ArrayList();
+            QuestionAnswerSpaces = new ArrayList();
 
-			//Questions
+            table1 = theSurvey.SectionA.EstablishmentT;
+            table2 = theSurvey.SectionA.ConfigurationT;
+            table3 = theSurvey.SectionA.CategoryT;
+
+            PropertyInfo[] properties = typeof(EstablishmentT).GetProperties();
+            foreach (PropertyInfo prop in properties)
+            {
+                Question q = (Question)prop.GetValue(table1);
+                String s = q.TheAnswer.GetType().ToString();
+
+                String ts = q.GetType().ToString();
+
+                if (ts.Contains("Est_Sub"))
+                {
+                    Question q2 = theSurvey.SectionA.CategoryT.Cat_Nam;
+                    QuestionLabels.Add(CreateLabel(q2));
+                    Picker p2 = genPicker();
+                    AddToPicker(q2, p2);
+                    p2.SelectedIndexChanged += (sender, e) => SelectedIndexChanged(sender, e, q2);
+                }
+                if (ts.Contains("Est_Dat"))
+                {
+                    Question q2 = theSurvey.SectionA.ConfigurationT.Con_Nam;
+                    QuestionLabels.Add(CreateLabel(q2));
+                    Picker p2 = genPicker();
+                    AddToPicker(q2, p2);
+                    p2.SelectedIndexChanged += (sender, e) => SelectedIndexChanged(sender, e, q2);
+                }
+
+                QuestionLabels.Add(CreateLabel(q));
+                if (q.HasOptions)
+                {
+                    Picker p = genPicker();
+                    AddToPicker(q, p);
+                    p.SelectedIndexChanged += (sender, e) => SelectedIndexChanged(sender, e, q);
+
+                }
+                else if (s.Contains("Date"))
+                {
+                    DatePicker dp = new DatePicker { };
+                    QuestionAnswerSpaces.Add(dp);
+                    dp.DateSelected += (sender, e) => SelectedDate(sender, e, q);
+                }
+                else if (s.Contains("Decimal") || s.Contains("Int") || ts.Contains("Est_Pho") || ts.Contains("Est_Tty"))
+                {
+                    Entry e = new Entry { Placeholder = "Enter answer here...", Keyboard = Keyboard.Numeric };
+                    EntryType(e, q);
+                }
+                else
+                {
+                    Entry e = new Entry { Placeholder = "Enter answer here..." };
+                    EntryType(e, q);
+                }
+            }
+            
+            /*PropertyInfo[] properties2 = typeof(ConfigurationT).GetProperties();
+            foreach (PropertyInfo prop in properties2)
+            {
+                Question q = (Question)prop.GetValue(table2);
+                String s = q.TheAnswer.GetType().ToString();
+                QuestionLabels.Add(CreateLabel(q));
+
+                if (q.HasOptions)
+                {
+                    Picker p = genPicker();
+                    AddToPicker(q, p);
+                    p.SelectedIndexChanged += (sender, e) => SelectedIndexChanged(sender, e, q);
+
+                }
+                else if (s.Contains("Date"))
+                {
+                    DatePicker dp = new DatePicker { };
+                    QuestionAnswerSpaces.Add(dp);
+                    dp.DateSelected += (sender, e) => SelectedDate(sender, e, q);
+                }
+                else if (s.Contains("Decimal") || s.Contains("Int"))
+                {
+                    Entry e = new Entry { Placeholder = "Enter answer here...", Keyboard = Keyboard.Numeric };
+                    EntryType(e, q);
+                }
+                else
+                {
+                    Entry e = new Entry { Placeholder = "Enter answer here..." };
+                    EntryType(e, q);
+                }
+            }
+
+            PropertyInfo[] properties3 = typeof(CategoryT).GetProperties();
+            foreach (PropertyInfo prop in properties3)
+            {
+                Question q = (Question)prop.GetValue(table3);
+                String s = q.TheAnswer.GetType().ToString();
+                QuestionLabels.Add(CreateLabel(q));
+
+                if (q.HasOptions)
+                {
+                    Picker p = genPicker();
+                    AddToPicker(q, p);
+                    p.SelectedIndexChanged += (sender, e) => SelectedIndexChanged(sender, e, q);
+
+                }
+                else if (s.Contains("Date"))
+                {
+                    DatePicker dp = new DatePicker { };
+                    QuestionAnswerSpaces.Add(dp);
+                    dp.DateSelected += (sender, e) => SelectedDate(sender, e, q);
+                }
+                else if (s.Contains("Decimal") || s.Contains("Int"))
+                {
+                    Entry e = new Entry { Placeholder = "Enter answer here...", Keyboard = Keyboard.Numeric };
+                    EntryType(e, q);
+                }
+                else
+                {
+                    Entry e = new Entry { Placeholder = "Enter answer here..." };
+                    EntryType(e, q);
+                }
+            }*/
+
+            for (int i = 0; i < QuestionLabels.Count; i++)
+            {
+                layout.Children.Add((Label)QuestionLabels[i]);
+                layout.Children.Add((View)QuestionAnswerSpaces[i]);
+            }
+            /*
+            //Questions
             var est_nam = new Label { Text = theSurvey.SectionA.EstablishmentT.Est_Nam.QuestionText , HorizontalTextAlignment = TextAlignment.Center, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label))};
             var est_nam_ans = new Entry { Placeholder = "Enter answer here..." };
             est_nam_ans.Completed += Est_nam_ans_Completed;
@@ -134,9 +268,107 @@ namespace A4AA_Application.SurveyPages
             layout.Children.Add(est_con_ema);
             layout.Children.Add(est_con_ema_ans);
             layout.Children.Add(est_con_com);
-            layout.Children.Add(est_con_com_ans);
+            layout.Children.Add(est_con_com_ans);*/
         }
 
+        private void EntryType(Entry ent, Question q)
+        {
+            QuestionAnswerSpaces.Add(ent);
+            ent.Unfocused += (sender, e) => Ans_Completed(sender, e, q); ;
+        }
+
+        private void Ans_Completed(object sender, EventArgs e, Question q)
+        {
+            try
+            {
+                q.TheAnswer.setAnswer(((Entry)sender).Text);
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Error", q.ErrorMessage, "OK");
+            }
+        }
+
+        private void SelectedDate(object sender, DateChangedEventArgs e, Question q)
+        {
+            try
+            {
+                q.TheAnswer.setAnswer(((DatePicker)sender).Date.ToString());
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Error", "Unforseen error.", "OK");
+            }
+        }
+
+        private void AddToPicker(Question q, Picker p)
+        {
+            QuestionAnswerSpaces.Add(p);
+            foreach (string s in q.Options)
+            {
+                p.Items.Add(s);
+            }
+
+        }
+
+        private Label CreateLabel(Question q)
+        {
+            Label l = new Label { Text = q.QuestionText, HorizontalTextAlignment = TextAlignment.Center, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
+
+            return l;
+
+        }
+
+        private Picker genPicker()
+        {
+            return new Picker { Title = "Select one" };
+        }
+
+
+        //Events
+        private void SelectedIndexChanged(object sender, EventArgs e, Question q)
+        {
+            try
+            {
+                q.TheAnswer.setAnswer(((Picker)sender).SelectedItem.ToString());
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Error", "Unforseen error.", "OK");
+            }
+        }
+
+        /*public void Sub_but_clicked(object sender, EventArgs args)
+        {
+            String message = "";
+            PropertyInfo[] properties = typeof(EstablishmentT).GetProperties();
+            foreach (PropertyInfo prop in table1.GetType().GetProperties())
+            {
+                Question q = (Question)prop.GetValue(table1);
+                message += q.TheAnswer.getAnswer() + "\n";
+
+            }
+
+            properties = typeof(ConfigurationT).GetProperties();
+            foreach (PropertyInfo prop in table2.GetType().GetProperties())
+            {
+                Question q = (Question)prop.GetValue(table2);
+                message += q.TheAnswer.getAnswer() + "\n";
+
+            }
+
+            properties = typeof(CategoryT).GetProperties();
+            foreach (PropertyInfo prop in table3.GetType().GetProperties())
+            {
+                Question q = (Question)prop.GetValue(table3);
+                message += q.TheAnswer.getAnswer() + "\n";
+
+            }
+
+            DisplayAlert("Answers", message, "OK");
+        }*/
+
+        /*
 		//Events
         private void Cat_nam_ans_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -333,6 +565,6 @@ namespace A4AA_Application.SurveyPages
             {
                 DisplayAlert("Error","Please enter valid data. Your text was too long. Text for this answer is allowed to be up to 255 characters long.","OK");
             }
-        }
+        }*/
     }
 }

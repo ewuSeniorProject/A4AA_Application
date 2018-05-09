@@ -2,7 +2,7 @@
 
 namespace A4AA_Application.SurveyClasses.SurveyQuestions
 {
-    class Lig_Typ : Question
+    public class Lig_Typ : Question
     {
 		
 

@@ -5,23 +5,23 @@ using A4AA_Application.SurveyClasses.SurveyAnswers;
 
 namespace A4AA_Application.SurveyClasses.SurveyQuestions
 {
-    public class STA_Bus_Lig_Typ : Lig_Typ
+    public class Ext_Sta_Han_Sid : Question
     {
         //private string[] options;
 
-        public STA_Bus_Lig_Typ() : base() { }
-        /*{
-            TheAnswer = new A_Text(32);
-            QuestionText = "Brightness level:";
+        public Ext_Sta_Han_Sid()
+        {
+            TheAnswer = new A_Text(24);
+            QuestionText = "Where are the handrails located?";
             HasOptions = true;
 
             options = new string[] 
             {
-                "Low",
-                "Medium",
-                "Bright"
+                "Left Side",
+                "Right Side",
+                "Neither Side"
             };
-        }*/
+        }
 
         //public string[] Options { get => options; set => options = value; }
         //NEED SOME OBJECT OR LOGIC HERE WHICH WILL PROVIDE USER WITH DROP DOWN OF CORRECT POTENTIAL OPTIONS

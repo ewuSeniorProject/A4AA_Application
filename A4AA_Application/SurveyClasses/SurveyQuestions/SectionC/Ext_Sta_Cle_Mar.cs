@@ -5,23 +5,11 @@ using A4AA_Application.SurveyClasses.SurveyAnswers;
 
 namespace A4AA_Application.SurveyClasses.SurveyQuestions
 {
-    public class STA_Bus_Lig_Typ : Lig_Typ
+    public class Ext_Sta_Cle_Mar : YesNoQuestion
     {
         //private string[] options;
 
-        public STA_Bus_Lig_Typ() : base() { }
-        /*{
-            TheAnswer = new A_Text(32);
-            QuestionText = "Brightness level:";
-            HasOptions = true;
-
-            options = new string[] 
-            {
-                "Low",
-                "Medium",
-                "Bright"
-            };
-        }*/
+        public Ext_Sta_Cle_Mar () : base("Stairs are clearly marked. (with contrasting color)") { }
 
         //public string[] Options { get => options; set => options = value; }
         //NEED SOME OBJECT OR LOGIC HERE WHICH WILL PROVIDE USER WITH DROP DOWN OF CORRECT POTENTIAL OPTIONS

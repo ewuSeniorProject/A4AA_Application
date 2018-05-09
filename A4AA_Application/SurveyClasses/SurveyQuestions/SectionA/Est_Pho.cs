@@ -11,6 +11,7 @@ namespace A4AA_Application.SurveyClasses.SurveyQuestions
         {
             TheAnswer = new A_Text(32);
             QuestionText = "Main Phone Number:";
+            ErrorMessage = "Invalid data. 32 characters allowed.";
         }
         //NEED SOME OBJECT OR LOGIC HERE WHICH WILL PROVIDE USER WITH DROP DOWN OF CORRECT POTENTIAL OPTIONS
     }
