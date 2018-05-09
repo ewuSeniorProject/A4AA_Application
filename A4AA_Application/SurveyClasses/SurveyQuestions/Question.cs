@@ -11,7 +11,6 @@ namespace A4AA_Application.SurveyClasses.SurveyQuestions
     {
         private Answer theAnswer;
         private string questionText;
-        private String errorMessage;
 		protected string[] options;
 		public Boolean HasOptions { get; set; }
 

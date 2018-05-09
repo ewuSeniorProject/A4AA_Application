@@ -28,6 +28,11 @@ namespace A4AA_Application.SurveyClasses.SurveyAnswers
         {
             return data.ToString();
         }
+
+        public override string getErrorMessage()
+        {
+            return "Invalid data. Up to 5 digits left of the decimal and up to 2 digits right of the decimal allowed.";
+        }
     }
 }
 
