@@ -680,7 +680,7 @@ namespace A4AA_Application.SurveyPages
             }
             catch (Exception)
             {
-                DisplayAlert("Error", q.ErrorMessage, "OK");
+                DisplayAlert("Error", q.TheAnswer.getErrorMessage(), "OK");
             }
         }
 

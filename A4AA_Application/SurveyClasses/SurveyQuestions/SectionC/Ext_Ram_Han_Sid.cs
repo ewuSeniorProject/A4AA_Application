@@ -5,11 +5,24 @@ using A4AA_Application.SurveyClasses.SurveyAnswers;
 
 namespace A4AA_Application.SurveyClasses.SurveyQuestions
 {
-    public class Ext_Sta_Sta_Ava : YesNoQuestion
+    public class Ext_Ram_Han_Sid : Question
     {
         //private string[] options;
 
-        public Ext_Sta_Sta_Ava() : base("Stairs are available to enter the establishment.") { }
+        public Ext_Ram_Han_Sid()
+        {
+            TheAnswer = new A_Text(32);
+            QuestionText = "What side of the ramps have handrails?";
+            HasOptions = true;
+
+            options = new string[] 
+            {
+                "Left",
+                "Right",
+                "None",
+                "N/A"
+            };
+        }
 
         //public string[] Options { get => options; set => options = value; }
         //NEED SOME OBJECT OR LOGIC HERE WHICH WILL PROVIDE USER WITH DROP DOWN OF CORRECT POTENTIAL OPTIONS
