@@ -214,6 +214,14 @@
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionH\Rou_Tab.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionH\Sea_no_ste.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionH\Tab_ais.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionI\Des_num.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionI\Key_nee.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionI\Num_whe_sig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionI\Pub_res.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionI\Restroom_InfoQ\Res_desc.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionI\Sig_acc.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionI\Sig_loc.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionI\Tot_num.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionJ\Aco.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionJ\Aco_lev.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionJ\Alt_com_met.cs" />
