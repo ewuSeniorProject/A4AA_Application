@@ -17,6 +17,7 @@ namespace A4AA_Application.SurveyPages
 		public SurveySectionI (Survey theSurvey)
 		{
 			InitializeComponent ();
+            Title = "Restrooms";
 		}
 	}
 }
