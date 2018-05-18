@@ -9,7 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A4AA_Application.Android", 
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		A4AA_Application\A4AA_Application.projitems*{6a3104b5-bb3b-4394-a82c-983ce279e7a8}*SharedItemsImports = 13
 		A4AA_Application\A4AA_Application.projitems*{fce78a11-7dbe-430a-a918-908918304833}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
