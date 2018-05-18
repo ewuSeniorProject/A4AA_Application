@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Collections;
+using System.Reflection;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using A4AA_Application.SurveyClasses;
+using A4AA_Application.SurveyClasses.SurveyTables;
 using A4AA_Application.SurveyClasses.SurveyQuestions;
 
 using Xamarin.Forms;
@@ -14,10 +17,162 @@ namespace A4AA_Application.SurveyPages
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class SurveySectionI : ContentPage
 	{
+        private Survey theSurvey;
+
+        private ArrayList QuestionLabels;
+        private ArrayList QuestionAnswerSpaces;
+        private RestroomT table1;
+        private Restroom_InfoT table2;
+
 		public SurveySectionI (Survey theSurvey)
 		{
+            this.theSurvey = theSurvey;
 			InitializeComponent ();
             Title = "Restrooms";
-		}
-	}
+            var layout = this.FindByName<StackLayout>("theStackLayoutI");
+
+            QuestionLabels = new ArrayList();
+            QuestionAnswerSpaces = new ArrayList();
+
+            table1 = theSurvey.SectionI.RestroomT;
+            table2 = theSurvey.SectionI.Restroom_InfoT;
+
+            PropertyInfo[] properties = typeof(RestroomT).GetProperties();
+            foreach (PropertyInfo prop in properties)
+            {
+                Question q = (Question)prop.GetValue(table1);
+                String s = q.TheAnswer.GetType().ToString();
+                QuestionLabels.Add(CreateLabel(q));
+
+                if (q.HasOptions)
+                {
+                    Picker p = genPicker();
+                    AddToPicker(q, p);
+                    p.SelectedIndexChanged += (sender, e) => SelectedIndexChanged(sender, e, q);
+
+                }
+                else if (s.Contains("Date"))
+                {
+                    DatePicker dp = new DatePicker { };
+                    QuestionAnswerSpaces.Add(dp);
+                    dp.DateSelected += (sender, e) => SelectedDate(sender, e, q);
+                }
+                else if (s.Contains("Decimal") || s.Contains("Int"))
+                {
+                    Entry e = new Entry { Placeholder = "Enter answer here...", Keyboard = Keyboard.Numeric };
+                    EntryType(e, q);
+                }
+                else
+                {
+                    Entry e = new Entry { Placeholder = "Enter answer here..." };
+                    EntryType(e, q);
+                }
+            }
+
+            properties = typeof(Restroom_InfoT).GetProperties();
+            foreach (PropertyInfo prop in properties)
+            {
+                Question q = (Question)prop.GetValue(table2);
+                String s = q.TheAnswer.GetType().ToString();
+                QuestionLabels.Add(CreateLabel(q));
+
+                if (q.HasOptions)
+                {
+                    Picker p = genPicker();
+                    AddToPicker(q, p);
+                    p.SelectedIndexChanged += (sender, e) => SelectedIndexChanged(sender, e, q);
+
+                }
+                else if (s.Contains("Date"))
+                {
+                    DatePicker dp = new DatePicker { };
+                    QuestionAnswerSpaces.Add(dp);
+                    dp.DateSelected += (sender, e) => SelectedDate(sender, e, q);
+                }
+                else if (s.Contains("Decimal") || s.Contains("Int"))
+                {
+                    Entry e = new Entry { Placeholder = "Enter answer here...", Keyboard = Keyboard.Numeric };
+                    EntryType(e, q);
+                }
+                else
+                {
+                    Entry e = new Entry { Placeholder = "Enter answer here..." };
+                    EntryType(e, q);
+                }
+            }
+
+            for (int i = 0; i < QuestionLabels.Count; i++)
+            {
+                layout.Children.Add((Label)QuestionLabels[i]);
+                layout.Children.Add((View)QuestionAnswerSpaces[i]);
+            }
+        }
+
+        private void EntryType(Entry ent, Question q)
+        {
+            QuestionAnswerSpaces.Add(ent);
+            ent.Unfocused += (sender, e) => Ans_Completed(sender, e, q); ;
+        }
+
+        private void Ans_Completed(object sender, EventArgs e, Question q)
+        {
+            try
+            {
+                q.TheAnswer.setAnswer(((Entry)sender).Text);
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Error", q.TheAnswer.getErrorMessage(), "OK");
+            }
+        }
+
+        private void SelectedDate(object sender, DateChangedEventArgs e, Question q)
+        {
+            try
+            {
+                q.TheAnswer.setAnswer(((DatePicker)sender).Date.ToString());
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Error", "Unforseen error.", "OK");
+            }
+        }
+
+        private void AddToPicker(Question q, Picker p)
+        {
+            QuestionAnswerSpaces.Add(p);
+            foreach (string s in q.Options)
+            {
+                p.Items.Add(s);
+            }
+
+        }
+
+        private Label CreateLabel(Question q)
+        {
+            Label l = new Label { Text = q.QuestionText, HorizontalTextAlignment = TextAlignment.Center, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
+
+            return l;
+
+        }
+
+        private Picker genPicker()
+        {
+            return new Picker { Title = "Select one" };
+        }
+
+
+        //Events
+        private void SelectedIndexChanged(object sender, EventArgs e, Question q)
+        {
+            try
+            {
+                q.TheAnswer.setAnswer(((Picker)sender).SelectedItem.ToString());
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Error", "Unforseen error.", "OK");
+            }
+        }
+    }
 }
