@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using A4AA_Application.SurveyClasses.SurveySections;
+using Newtonsoft.Json;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace A4AA_Application.SurveyClasses
 {
@@ -19,6 +22,7 @@ namespace A4AA_Application.SurveyClasses
             sectionH = new SectionH();
             sectionI = new SectionI();
             sectionJ = new SectionJ();
+			DB = new DatabaseCommunication();
         }
 
         private SectionA sectionA;
@@ -31,6 +35,7 @@ namespace A4AA_Application.SurveyClasses
         private SectionH sectionH;
         private SectionI sectionI;
         private SectionJ sectionJ;
+		private DatabaseCommunication DB;
 
         public SectionA SectionA { get => sectionA; set => sectionA = value; }
         public SectionB SectionB { get => sectionB; set => sectionB = value; }
@@ -42,5 +47,17 @@ namespace A4AA_Application.SurveyClasses
         public SectionH SectionH { get => sectionH; set => sectionH = value; }
         public SectionI SectionI { get => sectionI; set => sectionI = value; }
         public SectionJ SectionJ { get => sectionJ; set => sectionJ = value; }
-    }
+
+		public Task<HttpResponseMessage> AddTablesToDB()
+		{
+
+			SectionH.SetAnswers();
+			var json = JsonConvert.SerializeObject(SectionH);
+			var content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
+			return DB.Client.PostAsync(DB.Path, content);
+
+		}
+	}
+
+	
 }

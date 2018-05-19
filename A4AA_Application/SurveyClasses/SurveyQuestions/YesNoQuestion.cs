@@ -12,6 +12,7 @@ namespace A4AA_Application.SurveyClasses.SurveyQuestions
 			TheAnswer = new A_Text(4);
 			QuestionText = question;
 			HasOptions = true;
+			TheAnswer.setAnswer("N/A");
 
 			options = new String[]
 			{

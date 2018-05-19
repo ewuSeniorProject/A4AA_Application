@@ -63,6 +63,11 @@ namespace A4AA_Application.SurveyPages
         {
             await Navigation.PushAsync(new SurveySectionJ(theSurvey));
         }
+
+		public void Sub_Sur_clicked(object sender, EventArgs args)
+		{
+			theSurvey.AddTablesToDB();
+		}
         /*
         private string[] loadQuestions()
         {

@@ -6,7 +6,7 @@ namespace A4AA_Application.SurveyClasses.SurveyAnswers
 {
     public class A_Decimal5_2 : Answer
     {
-        private decimal data;
+        private decimal data = 0;
 
         public override void setAnswer(string s)
         {

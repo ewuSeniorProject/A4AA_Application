@@ -34,6 +34,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)DatabaseCommunication.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Login\CreateAccountPage.xaml.cs">
       <DependentUpon>CreateAccountPage.xaml</DependentUpon>
     </Compile>
@@ -276,6 +277,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionJ\Vis_inf_aud.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionJ\Web_txt_rea.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\YesNoQuestion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveySections\Section.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveySections\SectionA.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveySections\SectionB.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveySections\SectionC.cs" />

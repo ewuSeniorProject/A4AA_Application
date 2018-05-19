@@ -6,7 +6,7 @@ namespace A4AA_Application.SurveyClasses.SurveyAnswers
 {
     public class A_Int11 : Answer
     {
-        private int data;
+        private int data = 0;
 
         public override void setAnswer(string s)
         {
