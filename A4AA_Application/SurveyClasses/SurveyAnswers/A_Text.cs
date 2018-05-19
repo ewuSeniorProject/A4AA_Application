@@ -6,7 +6,7 @@ namespace A4AA_Application.SurveyClasses.SurveyAnswers
 {
     public class A_Text : Answer
     {
-        private string data;
+        private string data = "";
         private int size;
 
         public A_Text(int size)

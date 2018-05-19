@@ -30,6 +30,7 @@ namespace A4AA_Application.Login
 
 		public Task<HttpResponseMessage> AddNewAccountToDB(NewAccount Account)
 		{
+			DatabaseCommunication db = new DatabaseCommunication();
 			var client = new HttpClient();
 			var json= JsonConvert.SerializeObject(Account);
 			var content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");

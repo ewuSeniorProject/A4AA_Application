@@ -17,6 +17,7 @@
             <Button Text="Section H" Clicked="OnClickedH" />
             <Button Text="Section I" Clicked="OnClickedI" />
             <Button Text="Section J" Clicked="OnClickedJ" />
+            <Button Text="Submit Survey" Clicked="Sub_Sur_clicked" />
         </StackLayout>
     </ScrollView>
     
