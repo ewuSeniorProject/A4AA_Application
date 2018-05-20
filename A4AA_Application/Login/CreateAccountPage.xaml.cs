@@ -6,6 +6,7 @@ using System.Web;
 using System.Security.Cryptography;
 using System.IO;
 using System.Text;
+using A4AA_Application.SurveyPages;
 
 namespace A4AA_Application.Login
 {
@@ -13,13 +14,15 @@ namespace A4AA_Application.Login
 	public partial class CreateAccountPage : ContentPage
 	{
 		Entry[] Entries;
+		private Pages p;
 
-		public CreateAccountPage()
+		public CreateAccountPage(Pages p)
 		{
 
 			InitializeComponent();
 			MakeArrays();
 			this.BackgroundColor = Color.White;
+			this.p = p;
 
 		}
 
@@ -34,7 +37,7 @@ namespace A4AA_Application.Login
 					NewAccount NA = CreateAccount();
 					GetSetUser gs = new GetSetUser();
 					await gs.AddNewAccountToDB(NA);
-					await Navigation.PushAsync(new SurveyPages.MainSurveyPage());
+					await Navigation.PushAsync(p.mainPg);
 				}
 			} else
 			{
