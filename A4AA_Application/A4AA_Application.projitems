@@ -315,6 +315,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)SurveyPages\MainSurveyPage.xaml.cs">
       <DependentUpon>MainSurveyPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyPages\Pages.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionA.xaml.cs">
       <DependentUpon>SurveySectionA.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -346,6 +347,10 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionI.xaml.cs">
       <DependentUpon>SurveySectionI.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionI_2.xaml.cs">
+      <DependentUpon>SurveySectionI_2.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionJ.xaml.cs">
@@ -403,13 +408,19 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionI.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionJ.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionJ.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionI_2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionI.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>

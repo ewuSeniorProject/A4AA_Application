@@ -10,29 +10,34 @@ using Xamarin.Forms.Xaml;
 namespace A4AA_Application.SurveyPages
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class SurveySectionI : ContentPage
+	public partial class SurveySectionI_2 : ContentPage
 	{
+
 		private Survey theSurvey;
 
 		private ArrayList QuestionLabels;
 		private ArrayList QuestionAnswerSpaces;
-		private RestroomT Table;//here
-		private Pages pages;
+		private Restroom_InfoT Table;//here
+		private int restroomPages;
+		private int curRestPg;
+		private MainSurveyPage mp;
 
-		public SurveySectionI(Survey theSurvey, Pages pages)
+		public SurveySectionI_2(Survey theSurvey, int restroomPages, int curRestPg, MainSurveyPage mp)
 		{
-			this.pages = pages;
+			this.mp = mp;
+			this.restroomPages = restroomPages;
+			this.curRestPg = curRestPg;
 			this.theSurvey = theSurvey;
 			InitializeComponent();
-			Title = "Section I";
+			Title = "Section I_2";
 
-			var layout = this.FindByName<StackLayout>("theStackLayoutI");
+			var layout = this.FindByName<StackLayout>("theStackLayoutI_2");
 			QuestionLabels = new ArrayList();
 			QuestionAnswerSpaces = new ArrayList();
 
-			Table = theSurvey.SectionI.RestroomT;//here
+			Table = theSurvey.SectionI.Restroom_InfoT;//here
 
-			PropertyInfo[] properties = typeof(RestroomT).GetProperties();//here
+			PropertyInfo[] properties = typeof(Restroom_InfoT).GetProperties();//here
 			foreach (PropertyInfo prop in properties)
 			{
 				Question q = (Question)prop.GetValue(Table);
@@ -73,7 +78,7 @@ namespace A4AA_Application.SurveyPages
 			}
 
 			//Adding Submit Button
-			Button Sub_Button = new Button { Text = "Submit" };
+			Button Sub_Button = new Button { Text = "Next Restroom" };
 			Sub_Button.Clicked += Sub_but_clicked;
 			layout.Children.Add(Sub_Button);
 
@@ -149,8 +154,14 @@ namespace A4AA_Application.SurveyPages
 
 		public async void Sub_but_clicked(object sender, EventArgs args)
 		{
-			int maxPages = int.Parse(Table.Total_num.TheAnswer.getAnswer());
-			await Navigation.PushAsync(new SurveySectionI_2(theSurvey, maxPages, 0, pages.mainPg));
+			if (curRestPg < restroomPages)
+			{
+				await Navigation.PushAsync(new SurveySectionI_2(theSurvey, restroomPages, curRestPg++, mp));
+			}
+			else
+			{
+				await Navigation.PushAsync(mp);
+			}
 		}
 	}
 }
