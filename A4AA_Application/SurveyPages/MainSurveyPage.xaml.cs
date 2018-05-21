@@ -16,12 +16,12 @@ namespace A4AA_Application.SurveyPages
 	{ 
 		private Survey theSurvey;
 
-		public MainSurveyPage()
+		public MainSurveyPage(Survey theSurvey)
 		{
 			InitializeComponent();
             Title = "Your Survey!";
 
-			theSurvey = new Survey();
+			this.theSurvey = theSurvey;
 		}
 
         async void OnClickedA(object sender, EventArgs args)
