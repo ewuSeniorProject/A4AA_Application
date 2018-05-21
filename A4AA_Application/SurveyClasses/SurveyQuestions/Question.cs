@@ -13,6 +13,7 @@ namespace A4AA_Application.SurveyClasses.SurveyQuestions
         private string questionText;
 		protected string[] options;
 		public Boolean HasOptions { get; set; }
+        public Boolean HasBeenAnswered { get; set; }
 
 		public Answer TheAnswer { get => theAnswer; set => theAnswer = value; }
         public string QuestionText { get => questionText; set => questionText = value; }
