@@ -9,7 +9,7 @@ namespace A4AA_Application.SurveyClasses.SurveyQuestions
     {
         //private string[] options;
 
-        public Ext_Sta_Sta_Ava() : base("Stairs are required to enter the establishment.") { }
+        public Ext_Sta_Sta_Ava() : base("Stairs are available to enter the establishment.") { }
 
         //public string[] Options { get => options; set => options = value; }
         //NEED SOME OBJECT OR LOGIC HERE WHICH WILL PROVIDE USER WITH DROP DOWN OF CORRECT POTENTIAL OPTIONS

@@ -23,7 +23,7 @@ namespace A4AA_Application.SurveyPages
 
 			this.theSurvey = theSurvey;
 			InitializeComponent();
-			Title = "Section D";
+			Title = "Interior";
 			var layout = this.FindByName<StackLayout>("theStackLayoutD");
 
 			QuestionLabels = new ArrayList();
