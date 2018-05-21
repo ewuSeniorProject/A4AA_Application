@@ -52,7 +52,13 @@ namespace A4AA_Application.SurveyClasses
 		{
 
 			SectionH.SetAnswers();
-			var json = JsonConvert.SerializeObject(SectionH);
+			string json = "{\n";
+
+			json += "\"section h\":\n";
+
+			json += JsonConvert.SerializeObject(SectionH);
+
+			json += "\n}";
 			var content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
 			return DB.Client.PostAsync(DB.Path, content);
 
