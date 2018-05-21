@@ -147,12 +147,15 @@ namespace A4AA_Application.SurveyPages
 
 		public async void Sub_but_clicked(object sender, EventArgs args)
 		{
-			//await Navigation.PopAsync();
-		
+
+
 			int maxPages = int.Parse(Table.Total_num.TheAnswer.getAnswer());
-			
-			await Navigation.PushAsync(new SurveySectionI_2(theSurvey, maxPages, 1));
-			Navigation.RemovePage(this);
+
+			if (maxPages > 0)
+				await Navigation.PushAsync(new SurveySectionI_2(theSurvey, maxPages, 1));
+			else
+				await Navigation.PushAsync(new MainSurveyPage(theSurvey));
+			//Navigation.RemovePage(this);
 
 		}
 	}
