@@ -27,7 +27,7 @@ namespace A4AA_Application.SurveyClasses.SurveyTables
         private Question bar_height = new Bar_hei();
         private Question coat_hook = new Coa_hoo();
         private Question hook_height = new Hoo_hei();
-        private Question sink;
+        /*private Question sink;
         private Question sink_height;
         private Question faucet;
         private Question faucet_depth;
@@ -49,7 +49,7 @@ namespace A4AA_Application.SurveyClasses.SurveyTables
         private Question hygiene_seat_cover;
         private Question hygience_cover_height;
         private Question lighting;
-        private Question lighting_type;
+        private Question lighting_type;*/
         private Question comment = new Comment("Additional notes on accessible bathrooms, or on restrooms with potential to be modified for accessibility:");
 		private Question recommendation  = new Recommendations();
 
@@ -72,7 +72,7 @@ namespace A4AA_Application.SurveyClasses.SurveyTables
 		public Question Bar_height { get => bar_height; set => bar_height = value; }
 		public Question Coat_hook { get => coat_hook; set => coat_hook = value; }
 		public Question Hook_height { get => hook_height; set => hook_height = value; }
-		public Question Sink { get => sink; set => sink = value; }
+		/*public Question Sink { get => sink; set => sink = value; }
 		public Question Sink_height { get => sink_height; set => sink_height = value; }
 		public Question Faucet { get => faucet; set => faucet = value; }
 		public Question Faucet_depth { get => faucet_depth; set => faucet_depth = value; }
@@ -94,7 +94,7 @@ namespace A4AA_Application.SurveyClasses.SurveyTables
 		public Question Hygiene_seat_cover { get => hygiene_seat_cover; set => hygiene_seat_cover = value; }
 		public Question Hygience_cover_height { get => hygience_cover_height; set => hygience_cover_height = value; }
 		public Question Lighting { get => lighting; set => lighting = value; }
-		public Question Lighting_type { get => lighting_type; set => lighting_type = value; }
+		public Question Lighting_type { get => lighting_type; set => lighting_type = value; }*/
 		public Question Comment { get => comment; set => comment = value; }
 		public Question Recommendation { get => recommendation; set => recommendation = value; }
 	}

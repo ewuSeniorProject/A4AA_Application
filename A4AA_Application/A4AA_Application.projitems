@@ -315,7 +315,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)SurveyPages\MainSurveyPage.xaml.cs">
       <DependentUpon>MainSurveyPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)SurveyPages\Pages.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionA.xaml.cs">
       <DependentUpon>SurveySectionA.xaml</DependentUpon>
       <SubType>Code</SubType>
