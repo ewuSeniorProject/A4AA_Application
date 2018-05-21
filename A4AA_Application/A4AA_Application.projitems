@@ -356,6 +356,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveySections\SectionG.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveySections\SectionH.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveySections\SectionI.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveySections\SectionI_2.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveySections\SectionJ.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyTables\CategoryT.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyTables\CommunicationT.cs" />
