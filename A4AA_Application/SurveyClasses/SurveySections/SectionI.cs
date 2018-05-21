@@ -10,13 +10,13 @@ namespace A4AA_Application.SurveyClasses.SurveySections
         public SectionI()
         {
             restroomT = new RestroomT();
-            restroom_InfoT = new Restroom_InfoT();
+            restroom_InfoT = new List<Restroom_InfoT>();
         }
 
         private RestroomT restroomT;
-        private Restroom_InfoT restroom_InfoT;
+        private List<Restroom_InfoT> restroom_InfoT;
 
         public RestroomT RestroomT { get => restroomT; set => restroomT = value; }
-        public Restroom_InfoT Restroom_InfoT { get => restroom_InfoT; set => restroom_InfoT = value; }
+        public List<Restroom_InfoT> Restroom_InfoT { get => restroom_InfoT; set => restroom_InfoT = value; }
     }
 }

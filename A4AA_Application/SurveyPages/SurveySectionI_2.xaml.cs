@@ -33,7 +33,8 @@ namespace A4AA_Application.SurveyPages
 			QuestionLabels = new ArrayList();
 			QuestionAnswerSpaces = new ArrayList();
 
-			Table = theSurvey.SectionI.Restroom_InfoT;//here
+			Table = new Restroom_InfoT();//here
+			theSurvey.SectionI.Restroom_InfoT.Add(Table);
 
 			PropertyInfo[] properties = typeof(Restroom_InfoT).GetProperties();//here
 			foreach (PropertyInfo prop in properties)
@@ -160,7 +161,7 @@ namespace A4AA_Application.SurveyPages
 			}
 			else
 			{
-				await Navigation.PushAsync(new MainSurveyPage());
+				await Navigation.PushAsync(new MainSurveyPage(theSurvey));
 				
 			}
 			

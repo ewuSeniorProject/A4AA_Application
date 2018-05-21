@@ -37,7 +37,7 @@ namespace A4AA_Application.Login
 					NewAccount NA = CreateAccount();
 					GetSetUser gs = new GetSetUser();
 					await gs.AddNewAccountToDB(NA);
-					await Navigation.PushAsync(new MainSurveyPage());
+					//await Navigation.PushAsync(new MainSurveyPage());
 				}
 			} else
 			{
