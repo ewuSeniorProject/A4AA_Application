@@ -14,6 +14,7 @@
             <Button Text="Seating" Clicked="OnClickedH" />
             <Button Text="Restrooms" Clicked="OnClickedI" />
             <Button Text="Communication Technologies &amp; Customer Service" Clicked="OnClickedJ" />
+            <Button Text="Submit Survey" Clicked="Sub_Sur_clicked" />
         </StackLayout>
     </ScrollView>
 </ContentPage>

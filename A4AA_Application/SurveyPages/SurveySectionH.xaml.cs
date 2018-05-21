@@ -71,11 +71,6 @@ namespace A4AA_Application.SurveyPages
 				layout.Children.Add((View)QuestionAnswerSpaces[i]);
 			}
 
-			//Adding Submit Button
-			Button Sub_Button = new Button { Text = "Submit" };
-			Sub_Button.Clicked += Sub_but_clicked;
-			layout.Children.Add(Sub_Button);
-
 		}
 
 		private void EntryType(Entry ent, Question q)
@@ -146,18 +141,6 @@ namespace A4AA_Application.SurveyPages
 			}
 		}
 
-		public void Sub_but_clicked(object sender, EventArgs args)
-		{
-			String message = "";
-			PropertyInfo[] properties = typeof(InteriorT).GetProperties();
-			foreach (PropertyInfo prop in Table.GetType().GetProperties())
-			{
-				Question q = (Question)prop.GetValue(Table);
-				message += q.TheAnswer.getAnswer() + "\n";
-
-			}
-
-			DisplayAlert("Answers", message, "OK");
-		}
+		
 	}
 }

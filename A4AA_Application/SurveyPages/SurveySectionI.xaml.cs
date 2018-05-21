@@ -155,7 +155,6 @@ namespace A4AA_Application.SurveyPages
 				await Navigation.PushAsync(new SurveySectionI_2(theSurvey, maxPages, 1));
 			else
 				await Navigation.PushAsync(new MainSurveyPage(theSurvey));
-			//Navigation.RemovePage(this);
 
 		}
 	}

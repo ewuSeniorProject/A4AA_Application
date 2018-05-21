@@ -51,15 +51,18 @@ namespace A4AA_Application.SurveyClasses
 		public Task<HttpResponseMessage> AddTablesToDB()
 		{
 
-			SectionH.SetAnswers();
+			
 			string json = "{\n";
 
-			json += "\"section h\":\n";
-
-			json += JsonConvert.SerializeObject(SectionH);
+			//for loop to go through each section and create the json
+			//try json += JsonConvert.SerializeObject(this);
+			SectionI.SetAnswers();
+			json += "\"section G\":\n";//section letter
+			json += JsonConvert.SerializeObject(SectionI);//actual reference
+			//end
 
 			json += "\n}";
-			var content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
+			var content = new StringContent(json, Encoding.UTF8, "application/json");
 			return DB.Client.PostAsync(DB.Path, content);
 
 		}

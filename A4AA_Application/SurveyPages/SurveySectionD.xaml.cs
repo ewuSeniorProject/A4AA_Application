@@ -141,18 +141,6 @@ namespace A4AA_Application.SurveyPages
 			}
 		}
 
-		public void Sub_but_clicked(object sender, EventArgs args)
-		{
-			String message = "";
-			PropertyInfo[] properties = typeof(InteriorT).GetProperties();
-			foreach (PropertyInfo prop in Table.GetType().GetProperties())
-			{
-				Question q = (Question)prop.GetValue(Table);
-				message += q.TheAnswer.getAnswer() + "\n";
-
-			}
-
-				DisplayAlert("Answers", message, "OK");
-		}
+		
 	}
 }

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Reflection;
 using A4AA_Application.SurveyClasses;
 using A4AA_Application.SurveyClasses.SurveyQuestions;
+using A4AA_Application.SurveyClasses.SurveySections;
 using A4AA_Application.SurveyClasses.SurveyTables;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -33,8 +34,9 @@ namespace A4AA_Application.SurveyPages
 			QuestionLabels = new ArrayList();
 			QuestionAnswerSpaces = new ArrayList();
 
-			Table = new Restroom_InfoT();//here
-			theSurvey.SectionI.Restroom_InfoT.Add(Table);
+			SectionI_2 section = new SectionI_2();
+			Table = section.Restroom_InfoT;//here
+			theSurvey.SectionI.Restroom_InfoT.Add(section);
 
 			PropertyInfo[] properties = typeof(Restroom_InfoT).GetProperties();//here
 			foreach (PropertyInfo prop in properties)
