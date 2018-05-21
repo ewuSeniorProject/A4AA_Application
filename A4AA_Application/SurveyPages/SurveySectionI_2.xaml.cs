@@ -20,16 +20,14 @@ namespace A4AA_Application.SurveyPages
 		private Restroom_InfoT Table;//here
 		private int restroomPages;
 		private int curRestPg;
-		private MainSurveyPage mp;
 
-		public SurveySectionI_2(Survey theSurvey, int restroomPages, int curRestPg, MainSurveyPage mp)
+		public SurveySectionI_2(Survey theSurvey, int restroomPages, int curRestPg)
 		{
-			this.mp = mp;
 			this.restroomPages = restroomPages;
 			this.curRestPg = curRestPg;
 			this.theSurvey = theSurvey;
 			InitializeComponent();
-			Title = "Section I_2";
+			Title = "Restroom " + curRestPg + " Info";
 
 			var layout = this.FindByName<StackLayout>("theStackLayoutI_2");
 			QuestionLabels = new ArrayList();
@@ -154,14 +152,20 @@ namespace A4AA_Application.SurveyPages
 
 		public async void Sub_but_clicked(object sender, EventArgs args)
 		{
+			
 			if (curRestPg < restroomPages)
 			{
-				await Navigation.PushAsync(new SurveySectionI_2(theSurvey, restroomPages, curRestPg++, mp));
+				 await Navigation.PushAsync(new SurveySectionI_2(theSurvey, restroomPages, curRestPg+1));
+				//Parent = null;
 			}
 			else
 			{
-				await Navigation.PushAsync(mp);
+				await Navigation.PushAsync(new MainSurveyPage());
+				
 			}
+			
 		}
+
+		
 	}
 }

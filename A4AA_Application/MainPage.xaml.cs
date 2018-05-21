@@ -7,7 +7,7 @@ namespace A4AA_Application
 {
 	public partial class MainPage : ContentPage
 	{
-		private Pages p;
+		
 		public MainPage()
 		{
 			InitializeComponent();
@@ -16,7 +16,7 @@ namespace A4AA_Application
 			username.Text = Utils.Settings.LastUsedUsername;
 			password.Text = Utils.Settings.LastUsedPassword;
 			Survey theSurvey = new Survey();
-			p = new Pages(theSurvey);
+		
 		}
 		
 		async void OnClicked1(object sender, EventArgs args)
@@ -26,7 +26,7 @@ namespace A4AA_Application
 
 		async void OnClicked2(object sender, EventArgs args)
 		{
-			await Navigation.PushAsync(p.mainPg);
+			await Navigation.PushAsync(new MainSurveyPage());
 		}
 
 		void OnClicked3(object sender, EventArgs args)

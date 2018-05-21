@@ -13,57 +13,56 @@ using A4AA_Application.SurveyClasses;
 namespace A4AA_Application.SurveyPages
 {
 	public partial class MainSurveyPage : ContentPage
-	{
-		private Pages p;
+	{ 
 		private Survey theSurvey;
 
-		public MainSurveyPage (Pages pages, Survey theSurvey)
+		public MainSurveyPage()
 		{
 			InitializeComponent();
             Title = "Your Survey!";
-			p = pages;
-			this.theSurvey = theSurvey;
+
+			theSurvey = new Survey();
 		}
 
         async void OnClickedA(object sender, EventArgs args)
         {
-            await Navigation.PushAsync(p.A);
+            await Navigation.PushAsync(new SurveySectionA(theSurvey));
         }
         async void OnClickedB(object sender, EventArgs args)
         {
-            await Navigation.PushAsync(p.B);
+            await Navigation.PushAsync(new SurveySectionB(theSurvey));
         }
-         void OnClickedC(object sender, EventArgs args)
+        async void OnClickedC(object sender, EventArgs args)
         {
-             Navigation.PushAsync(p.C);
+             await Navigation.PushAsync(new SurveySectionC(theSurvey));
         }
-        void OnClickedD(object sender, EventArgs args)
+        async void OnClickedD(object sender, EventArgs args)
         {
-			Navigation.PushAsync(p.D);
+			await Navigation.PushAsync(new SurveySectionD(theSurvey));
 		}
 		async void OnClickedE(object sender, EventArgs args)
         {
-			await Navigation.PushAsync(p.E);
+			await Navigation.PushAsync(new SurveySectionE(theSurvey));
 		}
 		async void OnClickedF(object sender, EventArgs args)
         {
-            await Navigation.PushAsync(p.F);
+            await Navigation.PushAsync(new SurveySectionF(theSurvey));
         }
         async void OnClickedG(object sender, EventArgs args)
         {
-           await Navigation.PushAsync(p.G);
+           await Navigation.PushAsync(new SurveySectionG(theSurvey));
         }
         async void OnClickedH(object sender, EventArgs args)
         {
-            await Navigation.PushAsync(p.H);
+            await Navigation.PushAsync(new SurveySectionH(theSurvey));
         }
         async void OnClickedI(object sender, EventArgs args)
         {
-            await Navigation.PushAsync(p.I);
+            await Navigation.PushAsync(new SurveySectionI(theSurvey));
         }
         async void OnClickedJ(object sender, EventArgs args)
         {
-            await Navigation.PushAsync(p.J);
+            await Navigation.PushAsync(new SurveySectionJ(theSurvey));
         }
 
 		public void Sub_Sur_clicked(object sender, EventArgs args)

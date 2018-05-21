@@ -14,15 +14,15 @@ namespace A4AA_Application.Login
 	public partial class CreateAccountPage : ContentPage
 	{
 		Entry[] Entries;
-		private Pages p;
+		
 
-		public CreateAccountPage(Pages p)
+		public CreateAccountPage()
 		{
 
 			InitializeComponent();
 			MakeArrays();
 			this.BackgroundColor = Color.White;
-			this.p = p;
+			
 
 		}
 
@@ -37,7 +37,7 @@ namespace A4AA_Application.Login
 					NewAccount NA = CreateAccount();
 					GetSetUser gs = new GetSetUser();
 					await gs.AddNewAccountToDB(NA);
-					await Navigation.PushAsync(p.mainPg);
+					await Navigation.PushAsync(new MainSurveyPage());
 				}
 			} else
 			{
