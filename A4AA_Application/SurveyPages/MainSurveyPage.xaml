@@ -2,30 +2,18 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="A4AA_Application.SurveyPages.MainSurveyPage">
-
-    
     <ScrollView>
-        <!--<Label Text="Welcome to your survey!" FontSize="Large"/>-->
         <StackLayout VerticalOptions="CenterAndExpand">
-            <Button Text="Section A" Clicked="OnClickedA" />
-            <Button Text="Section B" Clicked="OnClickedB" />
-            <Button Text="Section C" Clicked="OnClickedC" />
-            <Button Text="Section D" Clicked="OnClickedD" />
-            <Button Text="Section E" Clicked="OnClickedE" />
-            <Button Text="Section F" Clicked="OnClickedF" />
-            <Button Text="Section G" Clicked="OnClickedG" />
-            <Button Text="Section H" Clicked="OnClickedH" />
-            <Button Text="Section I" Clicked="OnClickedI" />
-            <Button Text="Section J" Clicked="OnClickedJ" />
-            <Button Text="Submit Survey" Clicked="Sub_Sur_clicked" />
+            <Button Text="Premises Information" Clicked="OnClickedA" />
+            <Button Text="Parking, Loading Zone, Bus Stops" Clicked="OnClickedB" />
+            <Button Text="Exterior &amp; Entrance" Clicked="OnClickedC" />
+            <Button Text="Interior" Clicked="OnClickedD" />
+            <Button Text="Elevator &amp; Lifts" Clicked="OnClickedE" />
+            <Button Text="Signage" Clicked="OnClickedF" />
+            <Button Text="Emergency Preparedness" Clicked="OnClickedG" />
+            <Button Text="Seating" Clicked="OnClickedH" />
+            <Button Text="Restrooms" Clicked="OnClickedI" />
+            <Button Text="Communication Technologies &amp; Customer Service" Clicked="OnClickedJ" />
         </StackLayout>
     </ScrollView>
-    
-    <!--<ContentPage.Content>
-        <StackLayout>
-            <Label TextColor="BlueViolet" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Center" Text="Please enter data below."/>
-            <Entry Completed="Entry_Completed" HorizontalOptions="Center" VerticalOptions="Center" Placeholder="Enter data here..."/>
-            <Label x:Name="resLabel" TextColor="BlueViolet" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Center" Text=""/>
-        </StackLayout>
-        </ContentPage.Content>-->
 </ContentPage>

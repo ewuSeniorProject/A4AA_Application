@@ -19,7 +19,7 @@ namespace A4AA_Application.SurveyPages
 		public MainSurveyPage(Survey theSurvey)
 		{
 			InitializeComponent();
-            Title = "Your Survey!";
+            Title = "A4AA Survey";
 
 			this.theSurvey = theSurvey;
 		}

@@ -1,12 +1,59 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using A4AA_Application.SurveyClasses.SurveyQuestions;
 
 namespace A4AA_Application.SurveyClasses.SurveyTables
 {
     public class Main_EntranceT
     {
-        const double LARGEST_VALUE_ACCEPTED = 99999.99;
+        private Question mai_Ent_Tot_Num_Pub_Ent = new Mai_Ent_Tot_Num_Pub_Ent();
+        private Question mai_Ent_Mai_Ent_Acc = new Mai_Ent_Mai_Ent_Acc();
+        private Question mai_Ent_Alt_Ent_Acc = new Mai_Ent_Alt_Ent_Acc();
+        private Question mai_Ent_Acc_Sig = new Mai_Ent_Acc_Sig();
+        private Question mai_Ent_Gro_Lev = new Mai_Ent_Gro_Lev();
+        private Question mai_Ent_Thr_Lev = new Mai_Ent_Thr_Lev();
+        private Question mai_Ent_Thr_Bev = new Mai_Ent_Thr_Bev();
+        private Question mai_Ent_Bev_Hei = new Mai_Ent_Bev_Hei();
+        private Question mai_Ent_Doo_Act = new Mai_Ent_Doo_Act();
+        private Question mai_Ent_Doo_Ope_Cle = new Mai_Ent_Doo_Ope_Cle();
+        private Question mai_Ent_Ope_Mea = new Mai_Ent_Ope_Mea();
+        private Question mai_Ent_Doo_Eas_Ope = new Mai_Ent_Doo_Eas_Ope();
+        private Question mai_Ent_Doo_Ope_For = new Mai_Ent_Doo_Ope_For();
+        private Question mai_Ent_Doo_Use_Wit_Fis = new Mai_Ent_Doo_Use_Wit_Fis();
+        private Question mai_Ent_Doo_Aut_Ope = new Mai_Ent_Doo_Aut_Ope();
+        private Question mai_Ent_Sec_Doo_Ins = new Mai_Ent_Sec_Doo_Ins();
+        private Question mai_Ent_Min_Dis_Bet_Doo = new Mai_Ent_Min_Dis_Bet_Doo();
+        private Question mai_Ent_Lig = new Mai_Ent_Lig();
+        private Question mai_Ent_Lig_Opt = new Mai_Ent_Lig_Opt();
+        private Question mai_Ent_Lig_Typ = new Mai_Ent_Lig_Typ();
+        private Question mai_Ent_Com = new Mai_Ent_Com();
+        private Question mai_Ent_Rec = new Mai_Ent_Rec();
+
+        public Question Mai_Ent_Tot_Num_Pub_Ent { get => mai_Ent_Tot_Num_Pub_Ent; set => mai_Ent_Tot_Num_Pub_Ent = value; }
+        public Question Mai_Ent_Mai_Ent_Acc { get => mai_Ent_Mai_Ent_Acc; set => mai_Ent_Mai_Ent_Acc = value; }
+        public Question Mai_Ent_Alt_Ent_Acc { get => mai_Ent_Alt_Ent_Acc; set => mai_Ent_Alt_Ent_Acc = value; }
+        public Question Mai_Ent_Acc_Sig { get => mai_Ent_Acc_Sig; set => mai_Ent_Acc_Sig = value; }
+        public Question Mai_Ent_Gro_Lev { get => mai_Ent_Gro_Lev; set => mai_Ent_Gro_Lev = value; }
+        public Question Mai_Ent_Thr_Lev { get => mai_Ent_Thr_Lev; set => mai_Ent_Thr_Lev = value; }
+        public Question Mai_Ent_Thr_Bev { get => mai_Ent_Thr_Bev; set => mai_Ent_Thr_Bev = value; }
+        public Question Mai_Ent_Bev_Hei { get => mai_Ent_Bev_Hei; set => mai_Ent_Bev_Hei = value; }
+        public Question Mai_Ent_Doo_Act { get => mai_Ent_Doo_Act; set => mai_Ent_Doo_Act = value; }
+        public Question Mai_Ent_Doo_Ope_Cle { get => mai_Ent_Doo_Ope_Cle; set => mai_Ent_Doo_Ope_Cle = value; }
+        public Question Mai_Ent_Ope_Mea { get => mai_Ent_Ope_Mea; set => mai_Ent_Ope_Mea = value; }
+        public Question Mai_Ent_Doo_Eas_Ope { get => mai_Ent_Doo_Eas_Ope; set => mai_Ent_Doo_Eas_Ope = value; }
+        public Question Mai_Ent_Doo_Ope_For { get => mai_Ent_Doo_Ope_For; set => mai_Ent_Doo_Ope_For = value; }
+        public Question Mai_Ent_Doo_Use_Wit_Fis { get => mai_Ent_Doo_Use_Wit_Fis; set => mai_Ent_Doo_Use_Wit_Fis = value; }
+        public Question Mai_Ent_Doo_Aut_Ope { get => mai_Ent_Doo_Aut_Ope; set => mai_Ent_Doo_Aut_Ope = value; }
+        public Question Mai_Ent_Sec_Doo_Ins { get => mai_Ent_Sec_Doo_Ins; set => mai_Ent_Sec_Doo_Ins = value; }
+        public Question Mai_Ent_Min_Dis_Bet_Doo { get => mai_Ent_Min_Dis_Bet_Doo; set => mai_Ent_Min_Dis_Bet_Doo = value; }
+        public Question Mai_Ent_Lig { get => mai_Ent_Lig; set => mai_Ent_Lig = value; }
+        public Question Mai_Ent_Lig_Opt { get => mai_Ent_Lig_Opt; set => mai_Ent_Lig_Opt = value; }
+        public Question Mai_Ent_Lig_Typ { get => mai_Ent_Lig_Typ; set => mai_Ent_Lig_Typ = value; }
+        public Question Mai_Ent_Com { get => mai_Ent_Com; set => mai_Ent_Com = value; }
+        public Question Mai_Ent_Rec { get => mai_Ent_Rec; set => mai_Ent_Rec = value; }
+
+        /*const double LARGEST_VALUE_ACCEPTED = 99999.99;
         const int NUM_DIGITS_AFTER_DECIMAL = 2;
 
         private int total_num_public_entrances;
@@ -265,6 +312,6 @@ namespace A4AA_Application.SurveyClasses.SurveyTables
             {
                 recommendations = value;
             }
-        }
+        }*/
     }
 }
