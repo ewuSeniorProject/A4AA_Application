@@ -13,80 +13,87 @@ using A4AA_Application.SurveyClasses;
 namespace A4AA_Application.SurveyPages
 {
 	public partial class MainSurveyPage : ContentPage
-	{ 
+	{
 		private Survey theSurvey;
 
 		public MainSurveyPage(Survey theSurvey)
 		{
 			InitializeComponent();
-            Title = "A4AA Survey";
+			Title = "A4AA Survey";
 
 			this.theSurvey = theSurvey;
 		}
 
-        async void OnClickedA(object sender, EventArgs args)
-        {
-            await Navigation.PushAsync(new SurveySectionA(theSurvey));
-        }
-        async void OnClickedB(object sender, EventArgs args)
-        {
-            await Navigation.PushAsync(new SurveySectionB(theSurvey));
-        }
-        async void OnClickedC(object sender, EventArgs args)
-        {
-             await Navigation.PushAsync(new SurveySectionC(theSurvey));
-        }
-        async void OnClickedD(object sender, EventArgs args)
-        {
+		async void OnClickedA(object sender, EventArgs args)
+		{
+			await Navigation.PushAsync(new SurveySectionA(theSurvey));
+		}
+		async void OnClickedB(object sender, EventArgs args)
+		{
+			await Navigation.PushAsync(new SurveySectionB(theSurvey));
+		}
+		async void OnClickedC(object sender, EventArgs args)
+		{
+			await Navigation.PushAsync(new SurveySectionC(theSurvey));
+		}
+		async void OnClickedD(object sender, EventArgs args)
+		{
 			await Navigation.PushAsync(new SurveySectionD(theSurvey));
 		}
 		async void OnClickedE(object sender, EventArgs args)
-        {
+		{
 			await Navigation.PushAsync(new SurveySectionE(theSurvey));
 		}
 		async void OnClickedF(object sender, EventArgs args)
-        {
-            await Navigation.PushAsync(new SurveySectionF(theSurvey));
-        }
-        async void OnClickedG(object sender, EventArgs args)
-        {
-           await Navigation.PushAsync(new SurveySectionG(theSurvey));
-        }
-        async void OnClickedH(object sender, EventArgs args)
-        {
-            await Navigation.PushAsync(new SurveySectionH(theSurvey));
-        }
-        async void OnClickedI(object sender, EventArgs args)
-        {
-            await Navigation.PushAsync(new SurveySectionI(theSurvey));
-        }
-        async void OnClickedJ(object sender, EventArgs args)
-        {
-            await Navigation.PushAsync(new SurveySectionJ(theSurvey));
-        }
+		{
+			await Navigation.PushAsync(new SurveySectionF(theSurvey));
+		}
+		async void OnClickedG(object sender, EventArgs args)
+		{
+			await Navigation.PushAsync(new SurveySectionG(theSurvey));
+		}
+		async void OnClickedH(object sender, EventArgs args)
+		{
+			await Navigation.PushAsync(new SurveySectionH(theSurvey));
+		}
+		async void OnClickedI(object sender, EventArgs args)
+		{
+			await Navigation.PushAsync(new SurveySectionI(theSurvey));
+		}
+		async void OnClickedJ(object sender, EventArgs args)
+		{
+			await Navigation.PushAsync(new SurveySectionJ(theSurvey));
+		}
 
 		public void Sub_Sur_clicked(object sender, EventArgs args)
 		{
 			String responseMess = null;
+
 			Task<HttpResponseMessage> response = theSurvey.AddTablesToDB();
-			Console.Out.WriteLine(response.Status);
-			if (!response.Status.ToString().Contains("WaitingForActivation"))
+			//Console.Out.WriteLine(response.Status);
+			//if (!response.Status.ToString().Contains("WaitingForActivation"))
+			//{
+			Boolean hasMess = true;
+			try
 			{
 				responseMess = response.Result.ToString();
 			}
-			if(responseMess == null)
+			catch (Exception e)
 			{
-				DisplayAlert("Status:", "There was a problem uploading your survey. Remember that there has to be an internet connection", "OK");
+				hasMess = false;
 			}
-			else if (responseMess.Contains("200") && responseMess.Contains(@"'OK'")){
-				DisplayAlert("Status:","Your Survey has been uploaded successfully", "OK");
-			} else
+			//}
+			if (hasMess && responseMess.Contains("200") && responseMess.Contains(@"'OK'"))
+			{
+				DisplayAlert("Status:", "Your Survey has been uploaded successfully", "OK");
+			}
+			else
 			{
 				DisplayAlert("Status:", "There was a problem uploading your survey. Remember that there has to be an internet connection", "OK");
 			}
 			//DisplayAlert("http response:", responseMess, "OK");
 		}
-        
-    }
-	
+
+	}
+
 }
