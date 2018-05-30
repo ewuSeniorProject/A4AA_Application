@@ -5,13 +5,17 @@
              x:Class="A4AA_Application.MainPage">
 
     <StackLayout  HorizontalOptions ="CenterAndExpand" >
-        <Label Text="Welcome to Login page!" FontSize="Large"/>
+        <!--<Label Text="Welcome!" FontSize="Large"/>-->
         <StackLayout VerticalOptions="CenterAndExpand">
-            <Entry x:Name="UsernameEnt" Placeholder="Username" />
-            <Entry x:Name="PasswordEnt" Placeholder="Password" IsPassword="True"/>
-            <Button Text="Login" Clicked="OnClicked3"/>
-            <Button Text="Question Page" Clicked="OnClicked2"/>
-            <Button Text="Create Account" Clicked="OnClicked1" />
+            <!--<Entry x:Name="UsernameEnt" Placeholder="Username" />-->
+            <!--<Entry x:Name="PasswordEnt" Placeholder="Password" IsPassword="True"/>-->
+            <!--<Button Text="Login" Clicked="OnClicked3"/>-->
+            <Label x:Name="infoLabel" XAlign="Center"
+                   Text="Welcome to A4AA Mobile App! &#x0a; &#x0a; PLEASE NOTE: &#x0a; 1) THE APP WILL NOT PERSIST DATA UPON CLOSING. &#x0a; 2) THE APP WILL PERSIST DATA UPON SLEEP AND LATER RESUME. &#x0a; &#x0a; MAKE SURE TO SUBMIT DATA UPON INTERNET CONNECTION OR WIFI CONNECTION. &#x0a; &#x0a; &#x0a; &#x0a; &#x0a;"/>
+            
+            <Button Text="New/Resume Survey" Clicked="OnClicked2"/>
+            <!--<Button Text="Resume Survey" Clicked="Button_Clicked"/>-->
+            <!--<Button Text="Create Account" Clicked="OnClicked1" />-->
         </StackLayout>
     </StackLayout>
 
