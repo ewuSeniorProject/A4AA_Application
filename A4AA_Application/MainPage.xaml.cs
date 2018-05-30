@@ -12,33 +12,41 @@ namespace A4AA_Application
 		public MainPage()
 		{
 			InitializeComponent();
-			Entry username = this.FindByName<Entry>("UsernameEnt");
+            this.Title = "Welcome!";
+            /*Entry username = this.FindByName<Entry>("UsernameEnt");
 			Entry password = this.FindByName<Entry>("PasswordEnt");
 			username.Text = Utils.Settings.LastUsedUsername;
-			password.Text = Utils.Settings.LastUsedPassword;
-			theSurvey = new Survey();
-		
+			password.Text = Utils.Settings.LastUsedPassword;*/
+            if (theSurvey == null)
+            {
+                theSurvey = new Survey();
+            }
 		}
 		
-		async void OnClicked1(object sender, EventArgs args)
+		/*async void OnClicked1(object sender, EventArgs args)
 		{
-			//await Navigation.PushAsync(new Login.CreateAccountPage(p));
-		}
+			await Navigation.PushAsync(new Login.CreateAccountPage(p));
+		}*/
 
 		async void OnClicked2(object sender, EventArgs args)
 		{
-			await Navigation.PushAsync(new MainSurveyPage(theSurvey));
-		}
+            //await Navigation.PushAsync(new MainSurveyPage(theSurvey));
+            await Navigation.PushAsync(new MainSurveyPage(theSurvey));
+        }
 
-		void OnClicked3(object sender, EventArgs args)
+        /*async void Button_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MainSurveyPage(theSurvey));
+        }*/
+
+        /*void OnClicked3(object sender, EventArgs args)
 		{
-			/*Entry username = this.FindByName<Entry>("UsernameEnt");
+			Entry username = this.FindByName<Entry>("UsernameEnt");
 			String userNameText = username.Text;
 			Entry password = this.FindByName<Entry>("PasswordEnt");
 			String passwordText = password.Text;
 			Utils.Settings.LastUsedUsername = userNameText;
-			Utils.Settings.LastUsedPassword = passwordText;*/
-		}
-		
-	}
+			Utils.Settings.LastUsedPassword = passwordText;
+		}*/
+    }
 }
