@@ -67,9 +67,18 @@ namespace A4AA_Application.SurveyPages
 
 		public void Sub_Sur_clicked(object sender, EventArgs args)
 		{
+			String responseMess = null;
 			Task<HttpResponseMessage> response = theSurvey.AddTablesToDB();
-			String responseMess = response.Result.ToString();
-			if (responseMess.Contains("200") && responseMess.Contains(@"'OK'")){
+			Console.Out.WriteLine(response.Status);
+			if (!response.Status.ToString().Contains("WaitingForActivation"))
+			{
+				responseMess = response.Result.ToString();
+			}
+			if(responseMess == null)
+			{
+				DisplayAlert("Status:", "There was a problem uploading your survey. Remember that there has to be an internet connection", "OK");
+			}
+			else if (responseMess.Contains("200") && responseMess.Contains(@"'OK'")){
 				DisplayAlert("Status:","Your Survey has been uploaded successfully", "OK");
 			} else
 			{
