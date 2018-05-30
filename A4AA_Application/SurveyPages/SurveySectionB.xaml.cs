@@ -58,7 +58,7 @@ namespace A4AA_Application.SurveyPages
 			}
 
 			//Adding submit button
-			Button Sub_Button = new Button { Text = "Submit" };
+			Button Sub_Button = new Button { Text = "Enter information for routes" };
 			Sub_Button.Clicked += Sub_but_clicked;
 			layout.Children.Add(Sub_Button);
 		}
