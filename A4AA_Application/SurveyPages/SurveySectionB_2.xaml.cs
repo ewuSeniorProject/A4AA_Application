@@ -155,7 +155,7 @@ namespace A4AA_Application.SurveyPages
 
 			if (curRoutePg < numRoutePages)
 			{
-				await Navigation.PushAsync(new SurveySectionI_2(theSurvey, numRoutePages, curRoutePg + 1));
+				await Navigation.PushAsync(new SurveySectionB_2(theSurvey, numRoutePages, curRoutePg + 1));
 			}
 			else
 			{
