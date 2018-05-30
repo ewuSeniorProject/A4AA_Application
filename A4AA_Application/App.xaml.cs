@@ -14,14 +14,12 @@ namespace A4AA_Application
 		public App ()
 		{
 			InitializeComponent();
-
-			//MainPage = new HelloWorld.MainPage();
 			MainPage = new NavigationPage(new MainPage());
 		}
 
 		protected override void OnStart ()
 		{
-			// Handle when your app starts
+            // Handle when your app starts
 		}
 
 		protected override void OnSleep ()
