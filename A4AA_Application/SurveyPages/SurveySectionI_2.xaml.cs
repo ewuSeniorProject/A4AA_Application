@@ -36,7 +36,7 @@ namespace A4AA_Application.SurveyPages
 
 			SectionI_2 section = new SectionI_2();
 			Table = section.Restroom_InfoT;//here
-			theSurvey.SectionI.Restroom_InfoT.Add(section);
+			theSurvey.sectionI.Restroom_InfoT.Add(section);
 
 			PropertyInfo[] properties = typeof(Restroom_InfoT).GetProperties();//here
 			foreach (PropertyInfo prop in properties)
