@@ -105,8 +105,8 @@ namespace A4AA_Application.SurveyPages
 			{
 				try
 				{
-					q.TheAnswer.setAnswer(((DatePicker)sender).Date.ToString());
-				}
+                    q.TheAnswer.setAnswer(((DatePicker)sender).Date.ToString("yyyy-MM-dd"));
+                }
 				catch (Exception)
 				{
 					DisplayAlert("Error", "Unforseen error.", "OK");
