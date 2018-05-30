@@ -29,7 +29,7 @@ namespace A4AA_Application.SurveyPages
 			QuestionLabels = new ArrayList();
 			QuestionAnswerSpaces = new ArrayList();
 
-			Table = theSurvey.SectionE.ElevatorT;//here
+			Table = theSurvey.sectionE.ElevatorT;//here
 
 			PropertyInfo[] properties = typeof(ElevatorT).GetProperties();//here
 			foreach (PropertyInfo prop in properties)

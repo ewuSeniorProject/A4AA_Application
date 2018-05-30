@@ -30,9 +30,9 @@ namespace A4AA_Application.SurveyPages
             QuestionLabels = new ArrayList();
             QuestionAnswerSpaces = new ArrayList();
 
-            table1 = theSurvey.SectionA.EstablishmentT;
-            table2 = theSurvey.SectionA.ConfigurationT;
-            table3 = theSurvey.SectionA.CategoryT;
+            table1 = theSurvey.sectionA.EstablishmentT;
+            table2 = theSurvey.sectionA.ConfigurationT;
+            table3 = theSurvey.sectionA.CategoryT;
 
             PropertyInfo[] properties = typeof(EstablishmentT).GetProperties();
             foreach (PropertyInfo prop in properties)
@@ -44,7 +44,7 @@ namespace A4AA_Application.SurveyPages
 
                 if (ts.Contains("Est_Sub"))
                 {
-                    Question q2 = theSurvey.SectionA.CategoryT.Cat_Nam;
+                    Question q2 = theSurvey.sectionA.CategoryT.Cat_Nam;
                     QuestionLabels.Add(CreateLabel(q2));
                     Picker p2 = genPicker();
                     AddToPicker(q2, p2);
@@ -52,7 +52,7 @@ namespace A4AA_Application.SurveyPages
                 }
                 if (ts.Contains("Est_Dat"))
                 {
-                    Question q2 = theSurvey.SectionA.ConfigurationT.Con_Nam;
+                    Question q2 = theSurvey.sectionA.ConfigurationT.Con_Nam;
                     QuestionLabels.Add(CreateLabel(q2));
                     Picker p2 = genPicker();
                     AddToPicker(q2, p2);

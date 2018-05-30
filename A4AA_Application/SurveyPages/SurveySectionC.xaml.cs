@@ -36,10 +36,10 @@ namespace A4AA_Application.SurveyPages
             QuestionLabels = new ArrayList();
             QuestionAnswerSpaces = new ArrayList();
 
-            table1 = theSurvey.SectionC.Exterior_PathwaysT;
-            table2 = theSurvey.SectionC.Exterior_StairsT;
-            table3 = theSurvey.SectionC.Exterior_RampsT;
-            table4 = theSurvey.SectionC.Main_entranceT;
+            table1 = theSurvey.sectionC.Exterior_PathwaysT;
+            table2 = theSurvey.sectionC.Exterior_StairsT;
+            table3 = theSurvey.sectionC.Exterior_RampsT;
+            table4 = theSurvey.sectionC.Main_entranceT;
 
             PropertyInfo[] properties = typeof(Exterior_PathwaysT).GetProperties();
             foreach (PropertyInfo prop in properties)
