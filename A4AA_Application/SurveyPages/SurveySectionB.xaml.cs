@@ -39,6 +39,7 @@ namespace A4AA_Application.SurveyPages
             //table5 = theSurvey.SectionB.STA_RouteT;
 
             PropertyInfo[] properties = typeof(ParkingT).GetProperties();
+
 			generateFields(properties, table1);
 
             properties = typeof(Route_From_ParkingT).GetProperties();
@@ -50,12 +51,15 @@ namespace A4AA_Application.SurveyPages
             properties = typeof(STA_BusT).GetProperties();
 			generateFields(properties, table4);
 
-
 			for (int i = 0; i < QuestionLabels.Count; i++)
             {
                 layout.Children.Add((Label)QuestionLabels[i]);
                 layout.Children.Add((View)QuestionAnswerSpaces[i]);
             }
+
+            
+        }
+
 
 
 			//Adding submit button
@@ -96,7 +100,7 @@ namespace A4AA_Application.SurveyPages
 					EntryType(e, q);
 				}
 			}
-		}
+    }
 
         private void EntryType(Entry ent, Question q)
         {
@@ -109,6 +113,7 @@ namespace A4AA_Application.SurveyPages
             try
             {
                 q.TheAnswer.setAnswer(((Entry)sender).Text);
+                q.HasBeenAnswered = true;
             }
             catch (Exception)
             {
@@ -120,7 +125,8 @@ namespace A4AA_Application.SurveyPages
         {
             try
             {
-                q.TheAnswer.setAnswer(((DatePicker)sender).Date.ToString());
+                q.TheAnswer.setAnswer(((DatePicker)sender).Date.ToShortDateString());
+                q.HasBeenAnswered = true;
             }
             catch (Exception)
             {
@@ -151,6 +157,10 @@ namespace A4AA_Application.SurveyPages
             return new Picker { Title = "Select one" };
         }
 
+        private Picker genCustomPicker(Question q)
+        {
+            return new Picker { Title = q.TheAnswer.getAnswer() };
+        }
 
         //Events
         private void SelectedIndexChanged(object sender, EventArgs e, Question q)
@@ -158,12 +168,16 @@ namespace A4AA_Application.SurveyPages
             try
             {
                 q.TheAnswer.setAnswer(((Picker)sender).SelectedItem.ToString());
+                q.HasBeenAnswered = true;
             }
             catch (Exception)
             {
                 DisplayAlert("Error", "Unforseen error.", "OK");
             }
         }
+
+    }
+
 
 		public async void Sub_but_clicked(object sender, EventArgs args)
 		{

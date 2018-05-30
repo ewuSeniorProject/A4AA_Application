@@ -46,7 +46,15 @@ namespace A4AA_Application.SurveyPages
                 {
                     Question q2 = theSurvey.sectionA.CategoryT.Cat_Nam;
                     QuestionLabels.Add(CreateLabel(q2));
-                    Picker p2 = genPicker();
+                    Picker p2;
+                    if (q2.HasBeenAnswered == true)
+                    {
+                        p2 = genCustomPicker(q2);
+                    }
+                    else
+                    {
+                        p2 = genPicker();
+                    }
                     AddToPicker(q2, p2);
                     p2.SelectedIndexChanged += (sender, e) => SelectedIndexChanged(sender, e, q2);
                 }
@@ -54,7 +62,15 @@ namespace A4AA_Application.SurveyPages
                 {
                     Question q2 = theSurvey.sectionA.ConfigurationT.Con_Nam;
                     QuestionLabels.Add(CreateLabel(q2));
-                    Picker p2 = genPicker();
+                    Picker p2;
+                    if (q2.HasBeenAnswered == true)
+                    {
+                        p2 = genCustomPicker(q2);
+                    }
+                    else
+                    {
+                        p2 = genPicker();
+                    }
                     AddToPicker(q2, p2);
                     p2.SelectedIndexChanged += (sender, e) => SelectedIndexChanged(sender, e, q2);
                 }
@@ -62,25 +78,53 @@ namespace A4AA_Application.SurveyPages
                 QuestionLabels.Add(CreateLabel(q));
                 if (q.HasOptions)
                 {
-                    Picker p = genPicker();
+                    Picker p;
+                    if (q.HasBeenAnswered == true)
+                    {
+                        p = genCustomPicker(q);
+                    }
+                    else
+                    {
+                        p = genPicker();
+                    }
                     AddToPicker(q, p);
                     p.SelectedIndexChanged += (sender, e) => SelectedIndexChanged(sender, e, q);
 
                 }
                 else if (s.Contains("Date"))
                 {
-                    DatePicker dp = new DatePicker { };
+                    DatePicker dp = new DatePicker();
+                    if (q.HasBeenAnswered == true)
+                    {
+                        dp.Date = DateTime.Parse(q.TheAnswer.getAnswer());
+                    }
                     QuestionAnswerSpaces.Add(dp);
                     dp.DateSelected += (sender, e) => SelectedDate(sender, e, q);
                 }
                 else if (s.Contains("Decimal") || s.Contains("Int") || ts.Contains("Est_Pho") || ts.Contains("Est_Tty"))
                 {
-                    Entry e = new Entry { Placeholder = "Enter answer here...", Keyboard = Keyboard.Numeric };
+                    Entry e;
+                    if (q.HasBeenAnswered == true)
+                    {
+                        e = new Entry { Placeholder = q.TheAnswer.getAnswer(), Keyboard = Keyboard.Numeric };
+                    }
+                    else
+                    {
+                        e = new Entry { Placeholder = "Enter answer here...", Keyboard = Keyboard.Numeric };
+                    }
                     EntryType(e, q);
                 }
                 else
                 {
-                    Entry e = new Entry { Placeholder = "Enter answer here..." };
+                    Entry e;
+                    if (q.HasBeenAnswered == true)
+                    {
+                        e = new Entry { Placeholder = q.TheAnswer.getAnswer() };
+                    }
+                    else
+                    {
+                        e = new Entry { Placeholder = "Enter answer here..." };
+                    }
                     EntryType(e, q);
                 }
             }
@@ -104,6 +148,7 @@ namespace A4AA_Application.SurveyPages
             try
             {
                 q.TheAnswer.setAnswer(((Entry)sender).Text);
+                q.HasBeenAnswered = true;
             }
             catch (Exception)
             {
@@ -115,7 +160,8 @@ namespace A4AA_Application.SurveyPages
         {
             try
             {
-                q.TheAnswer.setAnswer(((DatePicker)sender).Date.ToString());
+                q.TheAnswer.setAnswer(((DatePicker)sender).Date.ToShortDateString());
+                q.HasBeenAnswered = true;
             }
             catch (Exception)
             {
@@ -146,6 +192,10 @@ namespace A4AA_Application.SurveyPages
             return new Picker { Title = "Select one" };
         }
 
+        private Picker genCustomPicker(Question q)
+        {
+            return new Picker { Title = q.TheAnswer.getAnswer() };
+        }
 
         //Events
         private void SelectedIndexChanged(object sender, EventArgs e, Question q)
@@ -153,6 +203,7 @@ namespace A4AA_Application.SurveyPages
             try
             {
                 q.TheAnswer.setAnswer(((Picker)sender).SelectedItem.ToString());
+                q.HasBeenAnswered = true;
             }
             catch (Exception)
             {
