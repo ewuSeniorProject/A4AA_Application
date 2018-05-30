@@ -28,7 +28,7 @@ namespace A4AA_Application.SurveyPages
 			QuestionLabels = new ArrayList();
 			QuestionAnswerSpaces = new ArrayList();
 
-			Table = theSurvey.SectionJ.CommunicationT;
+			Table = theSurvey.sectionJ.CommunicationT;
 
 			PropertyInfo[] properties = typeof(CommunicationT).GetProperties();
 			foreach (PropertyInfo prop in properties)

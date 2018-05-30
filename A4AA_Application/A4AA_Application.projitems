@@ -77,6 +77,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionB\Rou_Fro_Par_Rec.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionB\Pas_Loa_Dis.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionB\Pas_Loa_Com.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionB\STA_Bus_Rou_Num.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionB\STA_Rou_Wes_Bou_Sto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionB\STA_Rou_Eas_Bou_Sto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveyQuestions\SectionB\STA_Rou_Sou_Bou_Sto.cs" />
@@ -349,7 +350,16 @@
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveySections\Section.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveySections\SectionA.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveySections\SectionB.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveySections\SectionB0.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveySections\SectionB1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveySections\SectionB2.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveySections\SectionB3.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveySections\SectionB4.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveySections\SectionC.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveySections\SectionC0.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveySections\SectionC1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveySections\SectionC2.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveySections\SectionC3.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveySections\SectionD.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveySections\SectionE.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SurveyClasses\SurveySections\SectionF.cs" />
@@ -391,6 +401,10 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionB.xaml.cs">
       <DependentUpon>SurveySectionB.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionB_2.xaml.cs">
+      <DependentUpon>SurveySectionB_2.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionC.xaml.cs">
@@ -490,6 +504,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SurveyPages\SurveySectionB_2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
