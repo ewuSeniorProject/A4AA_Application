@@ -129,7 +129,7 @@ namespace A4AA_Application.SurveyPages
 		{
 			try
 			{
-				q.TheAnswer.setAnswer(((DatePicker)sender).Date.ToShortDateString());
+                q.TheAnswer.setAnswer(((DatePicker)sender).Date.ToString("yyyy-MM-dd"));
                 q.HasBeenAnswered = true;
 			}
 			catch (Exception)
