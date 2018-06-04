@@ -46,7 +46,7 @@ namespace A4AA_Application.SurveyClasses.SurveySections
 
 			foreach (SectionI_2 s in Restroom_InfoT)
 			{
-				s.SetAnswers();//here
+				s.SetAnswers();
 
 			}
 		}
