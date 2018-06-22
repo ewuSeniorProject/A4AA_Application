@@ -17,7 +17,7 @@ namespace A4AA_Application
 		public DatabaseCommunication()
 		{
 			Client = new HttpClient();
-			Path = @"http://a4as.mizesolutions.com/post/survey/mobile";
+			Path = @"http://a4as.access4allspokane.org/post/survey/mobile";
 		}
 
 		public Task<HttpResponseMessage> send_to_Database(Object o)
