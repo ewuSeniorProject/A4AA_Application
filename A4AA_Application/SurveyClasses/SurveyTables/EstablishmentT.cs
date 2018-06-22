@@ -1,12 +1,45 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using A4AA_Application.SurveyClasses.SurveyQuestions;
 
 namespace A4AA_Application.SurveyClasses.SurveyTables
 {
-    class EstablishmentT
+    public class EstablishmentT
     {
-        private string name;
+        private Question est_Nam = new Est_Nam();
+        private Question est_Web = new Est_Web();
+        private Question est_Sub = new Est_Sub();
+        private Question est_Dat = new Est_Dat();
+        private Question est_Str = new Est_Str();
+        private Question est_Cit = new Est_Cit();
+        private Question est_Sta = new Est_Sta();
+        private Question est_Zip = new Est_Zip();
+        private Question est_Pho = new Est_Pho();
+        private Question est_Tty = new Est_Tty();
+        private Question est_Con_Fna = new Est_Con_Fna();
+        private Question est_Con_Lna = new Est_Con_Lna();
+        private Question est_Con_Tit = new Est_Con_Tit();
+        private Question est_Con_Ema = new Est_Con_Ema();
+        private Question est_Con_Com = new Est_Con_Com();
+
+        public Question Est_Nam { get => est_Nam; set => est_Nam = value; }
+        public Question Est_Web { get => est_Web; set => est_Web = value; }
+        public Question Est_Sub { get => est_Sub; set => est_Sub = value; }
+        public Question Est_Dat { get => est_Dat; set => est_Dat = value; }
+        public Question Est_Str { get => est_Str; set => est_Str = value; }
+        public Question Est_Cit { get => est_Cit; set => est_Cit = value; }
+        public Question Est_Sta { get => est_Sta; set => est_Sta = value; }
+        public Question Est_Zip { get => est_Zip; set => est_Zip = value; }
+        public Question Est_Pho { get => est_Pho; set => est_Pho = value; }
+        public Question Est_Tty { get => est_Tty; set => est_Tty = value; }
+        public Question Est_Con_Fna { get => est_Con_Fna; set => est_Con_Fna = value; }
+        public Question Est_Con_Lna { get => est_Con_Lna; set => est_Con_Lna = value; }
+        public Question Est_Con_Tit { get => est_Con_Tit; set => est_Con_Tit = value; }
+        public Question Est_Con_Ema { get => est_Con_Ema; set => est_Con_Ema = value; }
+        public Question Est_Con_Com { get => est_Con_Com; set => est_Con_Com = value; }
+
+        /*private string name;
         private string webSite;
         private string subtype;
         private DateTime date;
@@ -204,6 +237,6 @@ namespace A4AA_Application.SurveyClasses.SurveyTables
             {
                 config_comment = value;
             }
-        }
+        }*/
     }
 }

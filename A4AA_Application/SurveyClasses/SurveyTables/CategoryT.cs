@@ -1,12 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using A4AA_Application.SurveyClasses.SurveyQuestions;
 
 namespace A4AA_Application.SurveyClasses.SurveyTables
 {
-    class CategoryT
+    public class CategoryT
     {
-        private string name;
+        private Question cat_Nam = new Cat_Nam();
+
+        public Question Cat_Nam { get => cat_Nam; set => cat_Nam = value; }
+
+        /*private string name;
 
         public string Name
         {
@@ -18,6 +23,6 @@ namespace A4AA_Application.SurveyClasses.SurveyTables
 
                 name = value;
             }
-        }
+        }*/
     }
 }
